@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Backyards</title>
+        <description>Backyards - X,qUe</description>
+        <link>http://xiaoque.github.io</link>
+        <link>http://xiaoque.github.io</link>
+        <lastBuildDate>2014-04-14T18:30:22+02:00</lastBuildDate>
+        <pubDate>2014-04-14T18:30:22+02:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>Highlight test</title>
+                <description>&lt;div class=&#39;highlight&#39;&gt;&lt;pre&gt;&lt;code class=&#39;javascript&#39;&gt;  
+&lt;span class=&#39;kd&#39;&gt;function&lt;/span&gt; &lt;span class=&#39;nx&#39;&gt;addref&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;(&lt;/span&gt;&lt;span class=&#39;o&#39;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#39;nx&#39;&gt;$a&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;)&lt;/span&gt;
+&lt;span class=&#39;p&#39;&gt;{&lt;/span&gt;
+    &lt;span class=&#39;nx&#39;&gt;$a&lt;/span&gt; &lt;span class=&#39;o&#39;&gt;+=&lt;/span&gt; &lt;span class=&#39;mi&#39;&gt;5&lt;/span&gt;&lt;span class=&#39;p&#39;&gt;;&lt;/span&gt;
+&lt;span class=&#39;p&#39;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+                <link>http://xiaoque.github.io/2014/04/14/highlight-test</link>
+                <guid>http://xiaoque.github.io/2014/04/14/highlight-test</guid>
+                <pubDate>2014-04-14T00:00:00+02:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>

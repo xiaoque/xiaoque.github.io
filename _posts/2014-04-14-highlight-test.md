@@ -2,7 +2,7 @@
 layout: page
 title: Highlight test
 ---
-{% highlight language %}  
+{% highlight javascript %}  
 function addref(&$a)
 {
     $a += 5;
