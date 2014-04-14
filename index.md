@@ -1,7 +1,7 @@
 ---
 layout: page
 title: X,que
-tagline: lulu
+tagline: Life goes on
 ---
 {% include JB/setup %}
 

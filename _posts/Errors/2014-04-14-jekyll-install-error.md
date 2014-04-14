@@ -51,4 +51,6 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
 网上查询错误发现各种说法都，最后查了很多问答最终参考了这里 <https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283>   
 
 只需将原本的安装语句 `sudo gem install jekyll`换成  
-`sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll`
+{% highlight language %}  
+sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll
+{% endhighlight %}
