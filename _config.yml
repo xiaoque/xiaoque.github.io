@@ -82,7 +82,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : xiaoque.github.io
+      short_name : xiaoquegithubio
     livefyre :
       site_id : 123
     intensedebate :
