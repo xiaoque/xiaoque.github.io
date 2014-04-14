@@ -4,8 +4,6 @@ category: Errors
 title: Jekyll install error
 tag: [Jekyll,配置, 问题]
 ---
-{% include JB/setup %}
-
 
 ###安装环境的过程中碰到问题:
 
