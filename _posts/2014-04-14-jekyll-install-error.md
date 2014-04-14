@@ -1,5 +1,14 @@
+---
+layout: page
+title: Jekyll install error
+tag: [Jekyll,配置, 问题]
+---
+{% include JB/setup %}
 
-安装了ruby和rubygem后开始安装jekyll,没想到出现了如下问题
+
+###安装环境的过程中碰到问题:
+
+安装了Ruby和Rubygem后开始安装jekyll,没想到出现了如下问题
 
 ````
 Building native extensions.  This could take a while...
@@ -31,12 +40,15 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
 ````
 
 
-检查版本ruby 版本为  
-ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]
-gem版本为 2.2.2
+检查了一下版本：  
+- **Ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]**
+- **gem 2.2.2**  
+- **Python 2.7.5**
+- **Mac OS X(10.9.2)**  
 
-网上查询错误发现各种说法都有，有说需要将ruby版本换为1.9.X的，又说gem版本要是2.1.1. 最后查了很多问答最终参考了这里 <https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283>   
+
+
+网上查询错误发现各种说法都，最后查了很多问答最终参考了这里 <https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283>   
 
 只需将原本的安装语句 `sudo gem install jekyll`换成  
 `sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll`
-愉快解决。
