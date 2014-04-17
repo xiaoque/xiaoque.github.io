@@ -9,7 +9,9 @@
     </div>
     <div class="content">
       {{ content }}
+
     </div>
+
 
   {% unless page.categories == empty %}
     <ul class="tag_box inline">
@@ -26,6 +28,7 @@
       {% include JB/tags_list %}
     </ul>
   {% endunless %}  
+
 
     <hr>
     <div class="pagination">
@@ -44,6 +47,5 @@
       </ul>
     </div>
     <hr>
-{% include disqus_comment.html  %}
   </div>
 </div>

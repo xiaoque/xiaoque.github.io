@@ -8,4 +8,4 @@ http://xiaoque.github.io/rss.xml
 http://xiaoque.github.io/sitemap.txt
 http://xiaoque.github.io/tags.html
 
-http://xiaoque.github.io/2014/04/14/highlight-test
+http://xiaoque.github.io/test/2014/04/14/highlight-test

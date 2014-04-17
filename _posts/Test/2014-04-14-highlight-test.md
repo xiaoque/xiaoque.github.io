@@ -1,5 +1,6 @@
 ---
 layout: page
+category: Test
 title: Highlight test
 ---
 {% highlight javascript %}  
