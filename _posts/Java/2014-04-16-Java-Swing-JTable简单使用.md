@@ -46,6 +46,9 @@ __初始化__
 	getContentPane().add(scrollPane_1);
 {% endhighlight %}
 
+初始化后能看到JTable基本成这个样子
+![image]({{site.img_url}}/2014-04-22-JTable-init.png)
+
 __赋值__  
 	我的需求是用户输入查询条件后，再将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数
 {% highlight java %}
