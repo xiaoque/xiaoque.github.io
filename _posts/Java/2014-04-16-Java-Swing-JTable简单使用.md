@@ -69,7 +69,8 @@ __赋值__
 	filmTable.invalidate();
 	filmTable.updateUI();
 {% endhighlight %}
-  
+
+最后JTable 显示为这样
 ![image]({{site.img_url}}/2014-04-22-JTable-data.png)
 
 
