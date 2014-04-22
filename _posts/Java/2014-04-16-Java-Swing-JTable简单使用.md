@@ -14,7 +14,7 @@ tag: [Java,Swing]
 _通过网上查询到的文章来看，基本上都是使用array来存储JTable里的数据，但是array便于删除，我更希望用链表的方式来存储数据，然后发现可以使用Vector来代替array。_
 
 
-1. __变量声明__  
+__变量声明__  
 {% highlight java %}  
 	private JTable filmTable;  
 	private DefaultTableModel filmTableModel;
@@ -23,7 +23,7 @@ _通过网上查询到的文章来看，基本上都是使用array来存储JTabl
 	private Vector filmVectorData;  
 {% endhighlight %}  
 
-2. __初始化__  
+__初始化__  
 	这里我先初始化了table的数据，两个Vector分别记录的是Table的表头和里面的数据。  
 {% highlight java %}  
 	this.filmVectorColName = new Vector();  
@@ -46,7 +46,7 @@ _通过网上查询到的文章来看，基本上都是使用array来存储JTabl
 	getContentPane().add(scrollPane_1);
 {% endhighlight %}
 
-3. __赋值__  
+__赋值__  
 	我的需求是用户输入查询条件后，再将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数
 {% highlight java %}
 	public void setData(ArrayList list, Vector data){
