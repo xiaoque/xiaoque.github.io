@@ -50,7 +50,7 @@ __初始化__
 ![image]({{site.img_url}}/2014-04-22-JTable-init.png)
 
 __赋值__  
-	我的需求是用户输入查询条件后，再将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数
+我需要的是是用户输入查询条件后，将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数
 {% highlight java %}
 	public void setData(ArrayList list, Vector data){
 		for(int i = 0; i < list.size() ; i++){
@@ -70,7 +70,7 @@ __赋值__
 	filmTable.updateUI();
 {% endhighlight %}
 
-最后JTable 显示为这样
+最后JTable 显示为这样  
 ![image]({{site.img_url}}/2014-04-22-JTable-data.png)
 
 
