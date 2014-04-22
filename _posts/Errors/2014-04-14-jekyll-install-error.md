@@ -9,7 +9,7 @@ tag: [Jekyll,配置, 问题]
 
 安装了Ruby和Rubygem后开始安装jekyll,没想到出现了如下问题
 
-````
+{% highlight text %}  
 Building native extensions.  This could take a while...
 ERROR:  Error installing jekyll:
     ERROR: Failed to build gem native extension.
@@ -36,7 +36,7 @@ make: *** [stemmer.bundle] Error 1
 
 Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2 for inspection.
 Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.out
-````
+{% endhighlight %}
 
 
 检查了一下版本：  
@@ -47,7 +47,10 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
 
 
 
-网上查询错误发现各种说法都，最后查了很多问答最终参考了这里 <https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283>   
+网上查询错误发现各种说法都，最后查了很多问答最终参考了这里 [Unable to install cheatset #2](https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283)  
 
-只需将原本的安装语句 `sudo gem install jekyll`换成  
-`sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll`
+只需将原本的安装语句 `sudo gem install jekyll`换成
+
+{% highlight text %}  
+sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll
+{% endhighlight %}
