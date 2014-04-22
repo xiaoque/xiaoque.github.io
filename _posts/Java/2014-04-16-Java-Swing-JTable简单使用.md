@@ -38,12 +38,12 @@ _通过网上查询到的文章来看，基本上都是使用array来存储JTabl
 	this.filmTableModel.setDataVector (filmVectorData,filmVectorColName);
 	this.filmTable = new JTable(filmTableModel);
 {% endhighlight %}  
-
-	然后将table添加到Frame中
+然后将table添加到Frame中
 {% highlight java %}
 	final JScrollPane scrollPane_1 = new JScrollPane(filmTable);
 	this.filmTable.setFillsViewportHeight(true);
-	scrollPane_1.setBounds(400, 30, 350, 70);		getContentPane().add(scrollPane_1);
+	scrollPane_1.setBounds(400, 30, 350, 70);
+	getContentPane().add(scrollPane_1);
 {% endhighlight %}
 
 3. __赋值__  
@@ -61,8 +61,7 @@ _通过网上查询到的文章来看，基本上都是使用array来存储JTabl
 		}
 	}
 {% endhighlight %}
-	
-	添加完数据后，更新显示  
+添加完数据后，更新显示  
 {% highlight java %}
 	filmTable.invalidate();
 	filmTable.updateUI();
