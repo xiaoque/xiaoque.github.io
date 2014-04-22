@@ -46,7 +46,7 @@ __初始化__
 	getContentPane().add(scrollPane_1);
 {% endhighlight %}
 
-初始化后能看到JTable基本成这个样子
+初始化后能看到JTable基本成这个样子  
 ![image]({{site.img_url}}/2014-04-22-JTable-init.png)
 
 __赋值__  
@@ -69,6 +69,9 @@ __赋值__
 	filmTable.invalidate();
 	filmTable.updateUI();
 {% endhighlight %}
+  
+![image]({{site.img_url}}/2014-04-22-JTable-data.png)
+
 
 
 
