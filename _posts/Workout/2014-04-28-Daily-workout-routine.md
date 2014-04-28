@@ -1,5 +1,6 @@
 ---
 layout: default
+type: post
 category: Workout
 title: Daily workout routine
 tag: [workout]

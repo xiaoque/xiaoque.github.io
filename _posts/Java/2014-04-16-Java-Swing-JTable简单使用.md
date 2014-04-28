@@ -1,5 +1,6 @@
 ---
 layout: default
+type: post
 category: Java
 title: Java Swing JTable 简单使用
 tag: [Java,Swing]
