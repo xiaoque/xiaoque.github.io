@@ -55,5 +55,4 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
 sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll
 {% endhighlight %}
 
-{% include disqus_comment.html  %}
 
