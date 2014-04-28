@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 category: Errors
 title: Jekyll install error
 tag: [Jekyll,配置, 问题]
