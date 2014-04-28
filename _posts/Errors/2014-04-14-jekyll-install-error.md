@@ -6,6 +6,8 @@ title: Jekyll install error
 tag: [Jekyll,配置, 问题]
 ---
 
+{% include JB/setup %}
+
 ###安装环境的过程中碰到问题:
 
 安装了Ruby和Rubygem后开始安装jekyll,没想到出现了如下问题
