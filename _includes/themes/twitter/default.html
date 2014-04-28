@@ -50,8 +50,9 @@
 
       <div class="content">
         {{ content }}
-      {% include disqus_comment.html  %}
-
+        {% if page.type %}
+        {% include disqus_comment.html  %}
+        {% endif %}
       </div>
       <hr>
       <footer>
