@@ -2,9 +2,10 @@
 layout: default
 type: post
 category: Workout
-title: Daily workout routine
+title: Daily Workout Routine
 tag: [workout]
 ---
+{% include JB/setup %}
 
 ###训练课表
 __DAY1：__ 热身 + 腿臀3组 + 高强度心肺训练4组 + 有氧项目30分钟 + 腰腹 + 拉伸  
