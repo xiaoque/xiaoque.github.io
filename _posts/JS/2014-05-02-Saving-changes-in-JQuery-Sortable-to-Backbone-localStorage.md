@@ -14,10 +14,12 @@ tag: [jQuery,Backbone,Sortable,LocalStorage]
 ***
 Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can see an official demo here [jQuey sortable](https://jqueryui.com/sortable/), also there is a site that explain it very clearly, I found it's very useful [jQuery Sortable](http://johnny.github.io/jquery-sortable/).
 
+
+
 ###Getting started
 ***
 
-First we shoud define Model, Collection, View.
+First is to define Model, Collection, View.
 
 #####Define Model
 {% highlight js linenos=table %}  
@@ -39,7 +41,7 @@ var Content = Backbone.Model.extend({
 #####Define Collection
 {% highlight js linenos=table %}  
 var ContentCollection = Backbone.Collection.extend({  
-	model: Tweet,  
+	model: Content,  
 	this.localStorage: new Backbone.LocalStorage("contentList"),  
 	nextOrder: function(){  
 		if (!this.length) return 1;  
@@ -63,7 +65,7 @@ _Note: the comparator is to sort models in collection_
 
 #####Define View
 {% highlight js linenos=table %}  
-	var SearchView = Backbone.View.extend({  
+	var ContentView = Backbone.View.extend({  
         tagName: 'li',  
         template: _.template($('#searchTemplate').html()),  
 
@@ -76,56 +78,55 @@ _Note: the comparator is to sort models in collection_
 
 {% endhighlight %}
 
+This is the view shows each single model
+
 #####Define AppView
 {% highlight js linenos=table %}  
-    var AppView = Backbone.View.extend({  
-            el: $("#contents"),  
-            
-            initialize: function(){  
+var AppView = Backbone.View.extend({  
+	el: $("#contents"),  
+	
+	initialize: function(){  
+		_.bindAll(this, 'add', 'addAll');  
+		this.collection.bind('add', this.add);  
+		this.collection.bind('reset', this.addAll);  
+		this.collection.fetch();  
+		},  
 
-            _.bindAll(this, 'add', 'addAll');  
-            this.collection.bind('add', this.add);  
-            this.collection.bind('reset', this.addAll);  
-            var collec = this.collection;  
-            this.collection.fetch();  
-        },  
-        
-            render: function(){  
-            $("#sortable").children().remove();  
-            this.addAll();  
-        },  
-        
-        add: function(model){  
-            var view = new SearchView({model: model});  
-            $("#sortable").append(view.render().el);  
-        },  
-
-        addAll: function(){  
-            this.collection.each(this.add, this);  
-        }  
-    });
-
+	render: function(){  
+		$("#sortable").children().remove();  
+		this.addAll();  
+	},  
+	
+	add: function(model){  
+		var view = new ContentView({model: model});  
+		$("#sortable").append(view.render().el);  
+	},  
+	
+	addAll: function(){  
+		this.collection.each(this.add, this);  
+	}  
+});  
 {% endhighlight %}
 
-#####html file
+#####HTML part
 
 {% highlight html linenos=table %}  
-   <div id="contents">  
-        <ul id="sortable">  
-        </ul>  
-    </div>  
+<div id="contents">  
+	<ul id="sortable">  
+	</ul>  
+</div>  
 {% endhighlight %}
 
 ##### template
 
 {% highlight html linenos=table %}
-    <script type="text/template" id="searchTemplate">  
-        <div class="search-result">  
-            <label><%- text %></label>  
-        </div>  
-    </script>
- 
+<script type="text/template" id="searchTemplate">  
+	<div class="show-content">  
+		<label><%- text %></label>  
+	</div>  
+</script>   
 {% endhighlight %}
+
 
 ### Setting up Sortable
 ***
@@ -137,46 +138,54 @@ Now initialise AppView and set up sortable.
     var app = new AppView({collection: collection});  
 {% endhighlight %}  
 
-initialise sortable and trigger  
+After this the whole page should be able to display models in content. Add models as you like.  
+
+
+Initialise sortable and trigger  
 {% highlight js linenos=table %}  
-    $(document).ready(function() {  
-        $('#sortable').sortable({  
-            stop: function (event, ui) {  
-                ui.item.trigger('drop', ui.item.index());  
-            }  
-        });  
-    });  
+$(document).ready(function() {  
+	$('#sortable').sortable({  
+		stop: function (event, ui) {  
+			ui.item.trigger('drop', ui.item.index());  
+		}  
+	});  
+});  
 {% endhighlight %}  
 
-then in SearchView define the events  
+This event is triggered when sorting has stopped, you can see official document here [event-stop](http://api.jqueryui.com/sortable/#event-stop), it will trigger the item's event 'drop', in this case, it's ContentView.
+
+So we define the event in ContentView  
 
 {% highlight js linenos=table %}  
-        events: {  
-            'drop': 'drop'  
-        },  
-        
-        drop: function(event, index){  
-            this.$el.trigger('update-sort', [this.model, index]);  
-        }  
+events: {  
+	'drop': 'drop'  
+},  
+
+drop: function(event, index){  
+	this.$el.trigger('update-sort', [this.model, index]);  
+}  
 {% endhighlight %}  
 
-and in AppView define event  
+Drop function also trigger an envent and passed 2 parameters, one is current dragged item, and the other is the position it dropped.  
+ 
+So in AppView we define 
+ 
 {% highlight js linenos=table %}  
-        events: {  
-            'update-sort': 'updateSort'  
-        },  
-        
-        updateSort: function(event, model, position){  
+events: {  
+	'update-sort': 'updateSort'  
+},  
 
-            this.collection.remove(model);  
-            var previousIndex = model.get("order");  
-            for(previousIndex ; previousIndex <= position ; previousIndex++){  
-                this.collection.models[previousIndex].save({"order": previousIndex});  
-            }  
-            this.collection.add(model,{at: position});  
-            this.collection.models[position].save({"order": position});  
-            this.render();  
-        }
+updateSort: function(event, model, position){  
+	this.collection.remove(model);  
+	var previousIndex = model.get("order");  
+	for(previousIndex ; previousIndex <= position ; previousIndex++){  
+		this.collection.models[previousIndex].save({"order": previousIndex});  
+	}  
+	this.collection.add(model,{at: position});  
+	this.collection.models[position].save({"order": position});  
+	this.render();  
+}
 {% endhighlight %}  
+
 
 Once we sort models in collection, sortable will fetch models according to the sequence, so to save the changes we don't have to change collection a lot, only need to change the order in model, and save it in localstorage.
