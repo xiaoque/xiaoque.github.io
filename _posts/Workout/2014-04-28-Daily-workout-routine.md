@@ -5,6 +5,7 @@ category: Workout
 title: Daily Workout Routine
 tag: [workout]
 ---
+
 {% include JB/setup %}
 
 ###训练课表

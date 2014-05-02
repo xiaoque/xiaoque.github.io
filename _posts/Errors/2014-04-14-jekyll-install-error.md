@@ -43,9 +43,9 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
 
 
 检查了一下版本：  
-- **Ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]**
+- **Ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]**  
 - **gem 2.2.2**  
-- **Python 2.7.5**
+- **Python 2.7.5**  
 - **Mac OS X(10.9.2)**  
 
 

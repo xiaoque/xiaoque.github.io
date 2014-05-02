@@ -8,6 +8,7 @@ tag: [Java,Swing]
 
 {% include JB/setup %}
 
+
 >主要是想用JTable 来显示用户查询到的数据，不涉及选中事件处理。
 
 ----
