@@ -68,8 +68,8 @@ __赋值__
 	}
 {% endhighlight %}
 添加完数据后，更新显示  
-{% highlight java linenos=table %}
-	filmTable.invalidate();
+{% highlight java linenos=table %}  
+	filmTable.invalidate();  
 	filmTable.updateUI();
 {% endhighlight %}
 
