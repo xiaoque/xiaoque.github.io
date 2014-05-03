@@ -47,7 +47,11 @@
     </div>
 
     <div class="container-narrow">
-
+      <div class="page-header">
+        <h1>        {% if page.type %}
+{{ page.title }}         {% endif %}
+{% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+      </div>
       <div class="content">
         {{ content }}
         {% if page.type %}
