@@ -1,7 +1,8 @@
 /* Custom container */
 .container-narrow {
   margin: 0 auto;
-  max-width: 700px; }
+  max-width: 700px;
+}
 
 .container-narrow > hr {
   margin: 30px 0; }
@@ -54,10 +55,9 @@
   padding: 3px 6px;
   margin: 2px;
   background: #23add6;
-  color: #eeeeee;
+  color: white;
   border-radius: 3px;
   text-decoration: none;
-  border: 1px solid #cccccc; 
 }
 
 .tag_box a span {
@@ -66,9 +66,6 @@
 
 .tag_box a:hover {
   background-color: #4bbfe1; }
-
-
-
 
 .cate_box li {
   line-height: 28px; }
@@ -83,10 +80,9 @@
   padding: 3px 6px;
   margin: 2px;
   background: #d55400;
-  color: #eeeeee;
+  color: white;
   border-radius: 3px;
   text-decoration: none;
-  border: 1px solid #cccccc; 
 }
 
 .cate_box a span {
@@ -96,7 +92,3 @@
 .cate_box a:hover {
   background-color: #ff6a09; }
 
-.cate_box a.active {
-  background: #57A957;
-  border: 1px solid #4c964d;
-  color: #FFF; }
