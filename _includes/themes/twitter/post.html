@@ -28,6 +28,8 @@
     </ul>
   {% endunless %}  
 
+  <br>
+  {% include addThisSharing.html %}
 
     <hr>
     <div class="pagination">
@@ -46,8 +48,7 @@
     </div>
     <hr>
   </div>
-
-  {% include disqus_comment.html  %}
+ {% include JB/comments-providers/disqus %}
 </div>
 
 
