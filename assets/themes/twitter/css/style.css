@@ -34,6 +34,7 @@
   margin: 0;
   overflow: hidden; 
 }
+
 .cate_box {
   list-style: none;
   margin: 0;
@@ -53,7 +54,7 @@
   padding: 3px 6px;
   margin: 2px;
   background: #23add6;
-  color: white;
+  color: #eeeeee;
   border-radius: 3px;
   text-decoration: none;
   border: 1px solid #cccccc; 
@@ -64,12 +65,9 @@
   font-size: 0.8em; }
 
 .tag_box a:hover {
-  background-color: #e5e5e5; }
+  background-color: #4bbfe1; }
 
-.tag_box a.active {
-  background: #57A957;
-  border: 1px solid #4c964d;
-  color: #FFF; }
+
 
 
 .cate_box li {
