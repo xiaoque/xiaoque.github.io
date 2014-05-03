@@ -6,8 +6,6 @@ title: Saving changes in jQuery Sortable to Backbone localStorage
 tag: [jQuery,Backbone,Sortable,LocalStorage]
 ---
 
-{% include JB/setup %}
-
 > The aim is to using jQuery Sortable to show models stored in localStorage and saving the sequence after changing.
 
 ###jQuery Sortable
