@@ -46,11 +46,11 @@
 .tag_box a {
   padding: 3px 6px;
   margin: 2px;
-  background: #eee;
-  color: #555;
+  background: #d55400;
+  color: white;
   border-radius: 3px;
   text-decoration: none;
-  border: 1px dashed #cccccc; }
+  border: 1px solid #cccccc; }
 
 .tag_box a span {
   vertical-align: super;

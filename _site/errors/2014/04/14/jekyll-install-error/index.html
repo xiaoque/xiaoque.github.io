@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jekyll install error</title>
+    
+    <meta name="author" content="X,qUe">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/themes/twitter/css/pygments.css">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Backyard</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      
+        <div class="page-header">
+  <h1>Jekyll install error </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>14 April 2014</span>
+    </div>
+    <div class="content">
+      
+<div class="page-header">
+  <h1>Jekyll install error </h1>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h3>安装环境的过程中碰到问题:</h3>
+
+<p>安装了Ruby和Rubygem后开始安装jekyll,没想到出现了如下问题</p>
+
+<div class="highlight"><pre><code class="text">  
+Building native extensions.  This could take a while...
+ERROR:  Error installing jekyll:
+    ERROR: Failed to build gem native extension.
+
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
+creating Makefile
+
+make &quot;DESTDIR=&quot;
+compiling porter.c
+porter.c:359:27: warning: &#39;&amp;&amp;&#39; within &#39;||&#39; [-Wlogical-op-parentheses]
+      if (a &gt; 1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k--;
+                ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+porter.c:359:27: note: place parentheses around the &#39;&amp;&amp;&#39; expression to silence this warning
+      if (a &gt; 1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k--;
+                          ^
+                   (                          )
+1 warning generated.
+compiling porter_wrap.c
+linking shared-object stemmer.bundle
+clang: error: unknown argument: &#39;-multiply_definedsuppress&#39; [-Wunused-command-line-argument-hard-error-in-future]
+clang: note: this will be a hard error (cannot be downgraded to a warning) in the future
+make: *** [stemmer.bundle] Error 1
+
+
+Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2 for inspection.
+Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.out
+</code></pre></div>
+
+<p>检查了一下版本：<br>
+- <strong>Ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]</strong><br>
+- <strong>gem 2.2.2</strong><br>
+- <strong>Python 2.7.5</strong><br>
+- <strong>Mac OS X(10.9.2)</strong>  </p>
+
+<p>网上查询错误发现各种说法都，最后查了很多问答最终参考了这里 <a href="https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283">Unable to install cheatset #2</a>  </p>
+
+<p>只需将原本的安装语句 <code>sudo gem install jekyll</code>换成</p>
+
+<div class="highlight"><pre><code class="text">  
+sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll
+</code></pre></div>
+
+
+  </div>
+</div>
+
+
+    </div>
+
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#errors-ref">
+    		errors <span>1</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/tags.html#Jekyll-ref">Jekyll <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#配置-ref">配置 <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#问题-ref">问题 <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      
+      
+        <li class="next"><a href="/java/2014/04/16/java-Swing-JTable%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8" title="Java Swing JTable 简单使用">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+  </div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xiaoquegithubio'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+</div>
+
+
+
+      
+
+      <hr>
+      <footer>
+        <p>&copy; 2014 X,qUe
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+
+
