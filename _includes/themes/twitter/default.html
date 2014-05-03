@@ -47,20 +47,14 @@
     </div>
 
     <div class="container-narrow">
-        {% if page.type == 'post' %}
-          <div class="page-header">
-            <h2> 
-              {{ page.title }}         
-            </h2>
-          </div>
-        {% endif %}
-
+      {% if page.type == 'post' %}
+        {% include post.html %}
+      {% else %}
       <div class="content">
         {{ content }}
-        {% if page.type == 'post' %}
-        {% include disqus_comment.html  %}
-        {% endif %}
       </div>
+      {% endif %}
+
       <hr>
       <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
