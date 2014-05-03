@@ -3,14 +3,15 @@ layout: page
 type: post
 category: Errors
 title: Jekyll install error
+description: Error occured when install Jekyll on Mac
 tag: [Jekyll,配置, 问题]
 ---
 
 ###安装环境的过程中碰到问题:
 
-安装了Ruby和Rubygem后开始安装jekyll,没想到出现了如下问题
+安装了Ruby和Rubygem后开始安装Jekyll,没想到出现了如下问题
 
-{% highlight text %}  
+{% highlight text %}
 Building native extensions.  This could take a while...
 ERROR:  Error installing jekyll:
     ERROR: Failed to build gem native extension.
@@ -42,7 +43,7 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
 
 检查了一下版本：  
 - **Ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]**  
-- **gem 2.2.2**  
+- **Gem 2.2.2**  
 - **Python 2.7.5**  
 - **Mac OS X(10.9.2)**  
 
@@ -52,7 +53,7 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
 
 只需将原本的安装语句 `sudo gem install jekyll`换成
 
-{% highlight text %}  
+{% highlight text %}
 sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll
 {% endhighlight %}
 

@@ -3,6 +3,7 @@ layout: default
 type: post
 category: Java
 title: Java Swing JTable 简单使用
+description: Simple use of Java Swing JTable
 tag: [Java,Swing]
 ---
 
@@ -16,7 +17,8 @@ _通过网上查询到的文章来看，基本上都是使用array来存储JTabl
 
 
 __变量声明__  
-{% highlight java linenos=table %}  
+
+{% highlight java linenos=table %}
 	private JTable filmTable;  
 	private DefaultTableModel filmTableModel;
 	
@@ -25,8 +27,9 @@ __变量声明__
 {% endhighlight %}  
 
 __初始化__  
-	这里我先初始化了table的数据，两个Vector分别记录的是Table的表头和里面的数据。  
-{% highlight java linenos=table %}  
+
+这里我先初始化了table的数据，两个Vector分别记录的是Table的表头和里面的数据。  
+{% highlight java linenos=table %}
 	this.filmVectorColName = new Vector();  
 	this.filmVectorData = new Vector();
 	
@@ -51,6 +54,7 @@ __初始化__
 ![image]({{site.img_url}}/2014-04-22-JTable-init.png)
 
 __赋值__  
+
 我需要的是是用户输入查询条件后，将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数
 {% highlight java linenos=table %}
 	public void setData(ArrayList list, Vector data){
@@ -66,8 +70,8 @@ __赋值__
 	}
 {% endhighlight %}
 添加完数据后，更新显示  
-{% highlight java linenos=table %}  
-	filmTable.invalidate();  
+{% highlight java linenos=table %}
+	filmTable.invalidate();
 	filmTable.updateUI();
 {% endhighlight %}
 
