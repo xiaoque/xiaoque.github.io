@@ -109,7 +109,7 @@ Jumping jacks1分钟→深蹲跳15次→Burpee15次→高抬腿30秒→jumping j
 ####腰腹训练模块  
 
 参见播放列表  
-[youku-腰腹、核心训练专辑](https://www.youtube.com/playlist?list=PLpXJ7Rlnuy86fCPGMsMSb1jon0OMB1dXk)
+[youku-腰腹、核心训练专辑](http://www.youku.com/playlist_show/id_20904460.html)
 
 [youtube-Core Strengthening Exercises](https://www.youtube.com/playlist?list=PLpXJ7Rlnuy86fCPGMsMSb1jon0OMB1dXk)
 
