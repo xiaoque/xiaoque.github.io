@@ -26,8 +26,13 @@
 
 /* post-full*/
 .post-full .date {
-  margin-bottom: 20px;
-  font-weight: bold; }
+  margin-bottom: 10px;
+  margin-top: -10px;
+  font-weight: initial;
+  font-style: italic;
+  width: 100%;
+  text-align: right;
+}
 
 /* tag_box */
 .tag_box {
@@ -92,4 +97,31 @@
 .cate_box a:hover {
   background-color: #ff6a09; }
 
+#post-title {
+  color: #6986d0;
+}
+
+.content hr{
+  margin:20px 0;
+  border:0;
+  width: 100%;
+  border-top:2px dotted #ededed;
+  border-bottom:1px solid #ffffff;
+}
+
+.page-header{
+  padding-bottom: 9px;
+  margin: 20px 0 0;
+  border: none;
+}
+
+.content blockquote h4{
+  line-height: 25px;
+}
+
+.bshare-custom{
+  margin-bottom: 20px;
+  width: 100%;
+  margin-left: 450px;
+}
 
