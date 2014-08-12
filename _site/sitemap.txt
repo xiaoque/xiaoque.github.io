@@ -8,6 +8,7 @@ http://xiaoque.github.io/rss.xml
 http://xiaoque.github.io/sitemap.txt
 http://xiaoque.github.io/tags.html
 
+http://xiaoque.github.io/daily%20thoughts/2014/08/12/quotes-from-time-traveler%27s-wife
 http://xiaoque.github.io/js/2014/05/02/saving-changes-in-jQuery-sortable-to-backbone-localstorage
 http://xiaoque.github.io/workout/2014/04/28/daily-workout-routine
 http://xiaoque.github.io/java/2014/04/16/java-Swing-JTable%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8

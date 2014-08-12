@@ -4,13 +4,26 @@
  <title>Backyard</title>
  <link href="http://xiaoque.github.io/" rel="self"/>
  <link href="http://xiaoque.github.io"/>
- <updated>2014-05-03T21:44:56+02:00</updated>
+ <updated>2014-08-13T01:49:15+02:00</updated>
  <id>http://xiaoque.github.io</id>
  <author>
    <name>X,qUe</name>
    <email>xiaoque55@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Quotes from Time Traveler's Wife</title>
+   <link href="http://xiaoque.github.io/daily%20thoughts/2014/08/12/quotes-from-time-traveler%27s-wife"/>
+   <updated>2014-08-12T00:00:00+02:00</updated>
+   <id>http://xiaoque.github.io/daily%20thoughts/2014/08/12/quotes-from-time-traveler's-wife</id>
+   <content type="html">&lt;hr&gt;
+
+&lt;blockquote&gt;
+&lt;h4&gt;&amp;quot; Long ago, men went to sea, and women waited for them, standing on the edge of the water, scanning the horizon for the tiny ship. Now I wait for Henry. He vanishes unwillingly, without warning. I wait for him. Each moment that I wait feels like a year, an eternity. Each moment is as slow and transparent as glass. Through each moment I can see infinite moments lined up, waiting. Why has he gone where I cannot follow? ”&lt;/h4&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Saving changes in jQuery Sortable to Backbone localStorage</title>
@@ -426,7 +439,7 @@
 &lt;h4&gt;腰腹训练模块&lt;/h4&gt;
 
 &lt;p&gt;参见播放列表&lt;br&gt;
-&lt;a href=&quot;https://www.youtube.com/playlist?list=PLpXJ7Rlnuy86fCPGMsMSb1jon0OMB1dXk&quot;&gt;youku-腰腹、核心训练专辑&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;http://www.youku.com/playlist_show/id_20904460.html&quot;&gt;youku-腰腹、核心训练专辑&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLpXJ7Rlnuy86fCPGMsMSb1jon0OMB1dXk&quot;&gt;youtube-Core Strengthening Exercises&lt;/a&gt;&lt;/p&gt;
 
