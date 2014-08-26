@@ -7,8 +7,7 @@ description:
 tag: [HTML5, CSS]
 ---
 
-{% highlight CSS %}
-
+{% highlight css %}
 .progressBarMixin(@backgroundColor,@progressBarColor, @borderRadius){
   progress {
     background-color: @backgroundColor;
@@ -31,11 +30,12 @@ tag: [HTML5, CSS]
     border-radius: @borderRadius;
   }
 }
+{% endhighlight %}  
 
-
+{% highlight css %}
 .progressBarMixin(@colorGreyLight,@colorBlueElectric, 50px);
       progress {
         height: 25px;
         width: 220px;
       }
-{% endhighlight %}
+{% endhighlight %}  
