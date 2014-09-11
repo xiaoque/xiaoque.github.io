@@ -8,6 +8,11 @@
 </div>
 {% endif %}
 
+{% if page.type == "index" %}
+<h1 class="index-header">
+    {{ page.title }}
+</h1>
+{% endif %}
 <div class="row-fluid">
     <div class="span12">
         {{ content }}
