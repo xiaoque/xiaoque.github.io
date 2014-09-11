@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 type: post
 category: Errors
 title: Jekyll install error

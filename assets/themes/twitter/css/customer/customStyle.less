@@ -1,51 +1,118 @@
 @import "constants";
 
-body{
+body {
   background: @colorGreyVeryLight;
 }
-#main-container{
-  max-width: 1000px;
+
+#main-container {
+  max-width: 900px;
   margin: 0 auto 2%;
   padding: 0 4px 4px;
   background: @colorWhite;
 }
 
-.wrapper{
+.wrapper {
   border: 1px dotted @colorGreyLight;
   border-top: none;
   padding: 6px;
 }
 
-.row-fluid{
+.row-fluid {
   min-height: 400px;
 }
 
-.page-header{
+.page-header {
   padding-bottom: 9px;
   margin: 20px 0 0;
   border-bottom: 2px solid @colorBlueElectricLight;
 }
 
-.posts{
+.header-svg{
+  width: 50px;
+  height: 50px;
+}
+
+.posts {
   float: left;
   width: 70%;
-  .index-year{
+  .index-year {
     font-weight: bold;
-    hr{
+    hr {
       margin: 10px 0;
       border: 0;
       border-top: 5px solid @colorGreyLight;
     }
   }
-  .index-month{
-    hr{
+  .index-month {
+    hr {
       margin: 10px 0;
       border: 0;
       border-top: 3px solid #eeeeee;
     }
   }
 }
-.index-right{
+
+.index-right {
   float: right;
   width: 25%;
+}
+
+.tag_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  li {
+    line-height: 28px;
+    i {
+      opacity: 0.9;
+    }
+  }
+  &.inline li {
+    float: left;
+  }
+  a {
+    padding: 3px 6px;
+    margin: 2px;
+    background: @colorTagbox;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    span {
+      vertical-align: super;
+      font-size: 0.8em;
+    }
+    &:hover {
+      background-color: @colorTagboxHover;
+    }
+  }
+}
+
+.cate_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  li {
+    line-height: 28px;
+    i {
+      opacity: 0.9;
+    }
+  }
+  &.inline li {
+    float: left;
+  }
+  a {
+    padding: 3px 6px;
+    margin: 2px;
+    background: @colorCat;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    span {
+      vertical-align: super;
+      font-size: 0.8em;
+    }
+    &:hover {
+      background-color: @colorCatHover;
+    }
+  }
 }
