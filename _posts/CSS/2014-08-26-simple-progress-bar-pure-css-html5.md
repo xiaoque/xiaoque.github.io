@@ -115,6 +115,7 @@ getProgressBarValue: function () {
 
 Finally, I got my progress bar.
 
-![image]({{site.img-url}}/progress-bar.png)
+
+![image]({{site.img_url}}/post-sources/progress-bar.png)
 
 Hope this can help you!
