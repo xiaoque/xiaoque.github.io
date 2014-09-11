@@ -32,16 +32,16 @@ _注：高强度心肺训练部分，如果实在实在完成不了4组，可以
 （动作间无休息！做完算1组，做3组，也就是做3遍的意思，组与组之间可休息30秒~1分钟）
 
 * 深蹲侧抬腿 20次  
-![image]({{site.img_url}}/2014-04-28-深蹲侧抬腿.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-深蹲侧抬腿.gif)  
 
 * 箭步蹲 10次  
-![image]({{site.img_url}}/2014-04-28-箭步蹲.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-箭步蹲.gif)  
 
 * 站姿后抬腿 15次  
-![image]({{site.img_url}}/2014-04-28-站姿后抬腿.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-站姿后抬腿.gif)  
 
 * 臀桥 20次  
-![image]({{site.img_url}}/2014-04-28-臀桥.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-臀桥.gif)  
 
 ####手臂，肩部训练模块  
 
@@ -49,19 +49,19 @@ _注：高强度心肺训练部分，如果实在实在完成不了4组，可以
 （动作间可休息5~10秒，做完算1组，做3组，组与组之间可休息30秒~1分钟）   
 
 * 哑铃推举 30秒  
-![image]({{site.img_url}}/2014-04-28-哑铃推举.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-哑铃推举.gif)  
 
 * 哑铃侧平举 30秒  
-![image]({{site.img_url}}/2014-04-28-哑铃侧平举.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-哑铃侧平举.gif)  
 
 * 哑铃前平举 30秒  
-![image]({{site.img_url}}/2014-04-28-哑铃前平举.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-哑铃前平举.gif)  
 
 * 哑铃弯举 30秒  
-![image]({{site.img_url}}/2014-04-28-哑铃弯举.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-哑铃弯举.gif)  
 
 * 俯身臂屈伸 30秒  
-![image]({{site.img_url}}/2014-04-28-俯身臂屈伸.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-俯身臂屈伸.gif)  
 
 
 ####背部训练模块
@@ -69,7 +69,7 @@ _注：高强度心肺训练部分，如果实在实在完成不了4组，可以
 弹力绳划船1分钟→休息10秒→弹力绳划船50秒→休息10秒→弹力绳划船40秒→休息5秒→弹力绳划船30秒 
 
 * 弹力绳划船  
-![image]({{site.img_url}}/2014-04-28-弹力绳划船.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-弹力绳划船.gif)  
 
 
 ####胸部，手臂训练模块  
@@ -78,13 +78,13 @@ _注：高强度心肺训练部分，如果实在实在完成不了4组，可以
 （动作间无休息！做完算1组，做3组，组与组之间可休息30秒~1分钟）  
 
 * 跪式俯卧撑 10个  
-![image]({{site.img_url}}/2014-04-28-跪式俯卧撑.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-跪式俯卧撑.gif)  
 
 * 推墙 1分钟  
-![image]({{site.img_url}}/2014-04-28-推墙.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-推墙.gif)  
 
 * 长凳臂屈伸 10个  
-![image]({{site.img_url}}/2014-04-28-长凳臂屈伸.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-长凳臂屈伸.gif)  
 
 
 ####高强度心肺训练模块  
@@ -93,16 +93,16 @@ Jumping jacks1分钟→深蹲跳15次→Burpee15次→高抬腿30秒→jumping j
 （动作间无休息！实在坚持不下来，可以休息，但要保证全部做完！做完算1组，做4组！组与组之间可休息30秒~1分钟）
 
 * jumping jacks 1分钟  
-![image]({{site.img_url}}/2014-04-28-jumpingjacks.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-jumpingjacks.gif)  
 
 * 深蹲跳 15次  
-![image]({{site.img_url}}/2014-04-28-深蹲跳.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-深蹲跳.gif)  
 
 * Burpee 15次  
-![image]({{site.img_url}}/2014-04-28-Burpee.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-Burpee.gif)  
 
 * 高抬腿 30秒  
-![image]({{site.img_url}}/2014-04-28-高抬腿.gif)  
+![image]({{site.img_url}}/post-sources/2014-04-28-高抬腿.gif)  
   
   
     

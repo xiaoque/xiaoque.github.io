@@ -51,7 +51,7 @@ __初始化__
 {% endhighlight %}
 
 初始化后能看到JTable基本成这个样子  
-![image]({{site.img_url}}/2014-04-22-JTable-init.png)
+![image]({{site.img_url}}/post-sources/2014-04-22-JTable-init.png)
 
 __赋值__  
 
@@ -76,7 +76,7 @@ __赋值__
 {% endhighlight %}
 
 最后JTable 显示为这样  
-![image]({{site.img_url}}/2014-04-22-JTable-data.png)
+![image]({{site.img_url}}/post-sources/2014-04-22-JTable-data.png)
 
 
 

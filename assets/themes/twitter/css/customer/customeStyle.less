@@ -1,0 +1,51 @@
+@import "constants";
+
+body{
+  background: @colorGreyVeryLight;
+}
+#main-container{
+  max-width: 1000px;
+  margin: 0 auto 2%;
+  padding: 0 4px 4px;
+  background: @colorWhite;
+}
+
+.wrapper{
+  border: 1px dotted @colorGreyLight;
+  border-top: none;
+  padding: 6px;
+}
+
+.row-fluid{
+  min-height: 400px;
+}
+
+.page-header{
+  padding-bottom: 9px;
+  margin: 20px 0 0;
+  border-bottom: 2px solid @colorBlueElectricLight;
+}
+
+.posts{
+  float: left;
+  width: 70%;
+  .index-year{
+    font-weight: bold;
+    hr{
+      margin: 10px 0;
+      border: 0;
+      border-top: 5px solid @colorGreyLight;
+    }
+  }
+  .index-month{
+    hr{
+      margin: 10px 0;
+      border: 0;
+      border-top: 3px solid #eeeeee;
+    }
+  }
+}
+.index-right{
+  float: right;
+  width: 25%;
+}
