@@ -41,9 +41,8 @@
 <div id="main-container">
     <div class="wrapper">
         <div class="navbar">
-            <div class="navbar-inner">
-                <div class="container-narrow">
-                    <div>
+            <div class="navbar-box-border">
+                    <div class="navbar-left">
                         <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
                         <small>{{site.tagline}}</small>
                     </div>
@@ -57,7 +56,6 @@
                         {% assign group = 'navigation' %}
                         {% include JB/pages_list %}
                     </ul>
-                </div>
             </div>
         </div>
 
