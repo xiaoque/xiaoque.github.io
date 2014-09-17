@@ -1,7 +1,7 @@
 @import "constants";
 
 body {
-  background: @colorGreyVeryLight;
+  background: @colorEggYellow;
 }
 
 .navbar {
@@ -9,8 +9,7 @@ body {
   width: 104%;
   margin-left: -2%;
   margin-bottom: 0;
-  color: @colorWhite;
-  background: @colorGreyLight;
+  background: @colorMilkWhite;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
@@ -20,7 +19,7 @@ body {
     height: 100%;
     margin: 4px 0px 0 4px;
     border-radius: 5px;
-    border: 1px dotted @colorGreyVeryVeryLight;
+    border: 1px dotted @colorGreyMidDark;
     display: inline-block;
 
     .navbar-left {
@@ -28,15 +27,59 @@ body {
       .brand {
         padding: 19px 20px 10px 33px;
         font-size: 200%;
-        color: @colorGreenLight;
+        color: @colorBlueElectricLight;
+        font-weight: bold;
       }
       small {
         font-size: 117%;
         padding: 33px 10px 10px 0;
         float: left;
         margin-left: -13px;
+        color: @colorGreyMidDark;
       }
     }
+    
+    .navbar-right{
+      float: right;
+        margin: 2% 1% 1%;
+        ul{
+          list-style: none;
+          margin:0;
+          li{
+            height: 25px;
+            float: left;
+            margin-right: 0px;
+            border-right: 1px solid @colorGreenDark;
+            padding: 0 20px;
+            padding-top: 3px;
+            &:last-child {
+              border-right: none;
+            }
+
+            & a {
+              text-decoration: none;
+              color: @colorLakeBlue;
+              font-size:16px;
+              text-transform: uppercase;
+
+              -webkit-transition: all 0.5s ease;
+              -moz-transition: all 0.5s ease;
+              -o-transition: all 0.5s ease;
+              -ms-transition: all 0.5s ease;
+              transition: all 0.5s ease;
+              &:hover{
+                color: @colorGreyLight;
+              }
+            }
+
+            &.active a{
+              color:@colorCatHover;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+
   }
 }
 
@@ -50,7 +93,10 @@ body {
 .wrapper {
   border: 1px dotted @colorGreyLight;
   border-top: none;
-  padding: 6px;
+}
+
+.index-title{
+  color: @colorPurple;
 }
 
 .row-fluid {
@@ -59,7 +105,7 @@ body {
 
 .page-header {
   padding-bottom: 9px;
-  margin: 20px 0 0;
+  margin: 0;
   border-bottom: 2px solid @colorBlueElectricLight;
 }
 
@@ -93,62 +139,5 @@ body {
   width: 25%;
 }
 
-.tag_box {
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  li {
-    line-height: 28px;
-    i {
-      opacity: 0.9;
-    }
-  }
-  &.inline li {
-    float: left;
-  }
-  a {
-    padding: 3px 6px;
-    margin: 2px;
-    background: @colorTagbox;
-    color: white;
-    border-radius: 3px;
-    text-decoration: none;
-    span {
-      vertical-align: super;
-      font-size: 0.8em;
-    }
-    &:hover {
-      background-color: @colorTagboxHover;
-    }
-  }
-}
 
-.cate_box {
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  li {
-    line-height: 28px;
-    i {
-      opacity: 0.9;
-    }
-  }
-  &.inline li {
-    float: left;
-  }
-  a {
-    padding: 3px 6px;
-    margin: 2px;
-    background: @colorCat;
-    color: white;
-    border-radius: 3px;
-    text-decoration: none;
-    span {
-      vertical-align: super;
-      font-size: 0.8em;
-    }
-    &:hover {
-      background-color: @colorCatHover;
-    }
-  }
-}
+

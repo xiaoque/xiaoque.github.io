@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
     <!-- Enable responsive viewport -->
@@ -19,8 +21,8 @@
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/pygments.css">
 
-    <link rel="stylesheet/less" type="text/css" href="{{ ASSET_PATH }}/css/customer/customStyle.less"/>
-    <link href="{{ ASSET_PATH }}/css/customer/svgStyle.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet/less" type="text/css" href="{{ ASSET_PATH }}/css/customer/style.less"/>
+    <link href="{{ ASSET_PATH }}/css/customer/svgStyle.css" rel="stylesheet" type="text/css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
     <!-- Le fav and touch icons -->
@@ -32,8 +34,10 @@
     -->
 
     <!-- atom & rss feed -->
-    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate"
+          title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate"
+          title="Sitewide RSS Feed">
 
 </head>
 
@@ -42,43 +46,44 @@
     <div class="wrapper">
         <div class="navbar">
             <div class="navbar-box-border">
-                    <div class="navbar-left">
-                        <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-                        <small>{{site.tagline}}</small>
-                    </div>
-                    <ul class="nav">
+                <div class="navbar-left">
+                    <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+                    <small>{{site.tagline}}</small>
+                </div>
+                <nav class="navbar-right">
+                    <ul class="navbar-list">
+                        {% assign pages_list = site.pages %}
+                        {% assign group = 'navigation' %}
+                        {% include JB/pages_list %}
                         {% assign pages_list = site.pages %}
                         {% assign group = 'self' %}
                         {% include JB/pages_list %}
                     </ul>
-                    <ul class="nav">
-                        {% assign pages_list = site.pages %}
-                        {% assign group = 'navigation' %}
-                        {% include JB/pages_list %}
-                    </ul>
+                </nav>
             </div>
         </div>
 
-    <div class="container-narrow">
-      {% if page.type == 'post' %}
-        {% include themes/twitter/post.html %}
-      {% else %}
-      <div class="content">
-        {{ content }}
-      </div>
-      {% endif %}
+        <div class="container-narrow">
+            {% if page.type == 'post' %}
+            {% include themes/twitter/post.html %}
+            {% else %}
+            <div class="content">
+                {{ content }}
+            </div>
+            {% endif %}
 
-      <hr class="after-title">
-      <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
-      </footer>
+            <hr class="after-title">
+            <footer>
+                <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+                    with help from <a href="http://jekyllbootstrap.com" target="_blank"
+                                      title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                    and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+                </p>
+            </footer>
 
         </div>
         {% include JB/analytics-providers/google %}
     </div>
-      {% include JB/analytics-providers/google %}
-  </body>
+    {% include JB/analytics-providers/google %}
+</body>
 </html>
