@@ -1,0 +1,59 @@
+.tag_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  li {
+    line-height: 28px;
+    i {
+      opacity: 0.9;
+    }
+  }
+  &.inline li {
+    float: left;
+  }
+  a {
+    padding: 3px 6px;
+    margin: 2px;
+    background: @colorTagbox;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    span {
+      vertical-align: super;
+      font-size: 0.8em;
+    }
+    &:hover {
+      background-color: @colorTagboxHover;
+    }
+  }
+}
+
+.cate_box {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  li {
+    line-height: 28px;
+    i {
+      opacity: 0.9;
+    }
+  }
+  &.inline li {
+    float: left;
+  }
+  a {
+    padding: 3px 6px;
+    margin: 2px;
+    background: @colorCat;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    span {
+      vertical-align: super;
+      font-size: 0.8em;
+    }
+    &:hover {
+      background-color: @colorCatHover;
+    }
+  }
+}
