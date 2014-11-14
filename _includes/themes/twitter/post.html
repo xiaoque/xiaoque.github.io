@@ -16,6 +16,21 @@
             {{ content }}
         </div>
 
+        {% unless page.categories == empty %}
+        <ul class="cate_box inline">
+            <li><i class="icon-folder-open"></i></li>
+            {% assign categories_list = page.categories %}
+            {% include JB/categories_list %}
+        </ul>
+        {% endunless %}
+
+        {% unless page.tags == empty %}
+        <ul class="tag_box inline">
+            <li><i class="icon-tags"></i></li>
+            {% assign tags_list = page.tags %}
+            {% include JB/tags_list %}
+        </ul>
+        {% endunless %}
         <br>
         {% include addThisSharing.html %}
     </div>
@@ -25,6 +40,11 @@
         <div class="category-title"> Categories </div>
         {% assign categories_list = site.categories %}
         {% include JB/categories_list %}
+    </div>
+    <div class="post-page-tag">
+        <div class="tag-title"> Tags </div>
+        {% assign tags_list = site.tags %}
+        {% include JB/tags_list %}
     </div>
     </div>
 
@@ -47,21 +67,7 @@
         </ul>
     </div>
 
-    {% unless page.categories == empty %}
-    <ul class="cate_box inline">
-        <li><i class="icon-folder-open"></i></li>
-        {% assign categories_list = page.categories %}
-        {% include JB/categories_list %}
-    </ul>
-    {% endunless %}
 
-    {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-        <li><i class="icon-tags"></i></li>
-        {% assign tags_list = page.tags %}
-        {% include JB/tags_list %}
-    </ul>
-    {% endunless %}
 
 
     <hr>

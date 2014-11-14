@@ -4,13 +4,36 @@
  <title>Backyard</title>
  <link href="http://xiaoque.github.io/" rel="self"/>
  <link href="http://xiaoque.github.io"/>
- <updated>2014-09-17T14:56:30+02:00</updated>
+ <updated>2014-11-03T01:58:26+01:00</updated>
  <id>http://xiaoque.github.io</id>
  <author>
    <name>X,qUe</name>
    <email>xiaoque55@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Quotes from Marley & Me</title>
+   <link href="http://xiaoque.github.io/daily%20thoughts/2014/09/14/quotes-from-marley-me"/>
+   <updated>2014-09-14T00:00:00+02:00</updated>
+   <id>http://xiaoque.github.io/daily%20thoughts/2014/09/14/quotes-from-marley-me</id>
+   <content type="html">&lt;hr&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://xiaoque.github.com/assets/images/post-sources/marley-and-me.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A dog has no use for fancy cars or big homes or designer clothes
+A waterlogged stick will do just fine.
+A dog doesn’t care if you are rich or poor…
+clever or dull, smart or dumb.
+Give’em your heart and he’ll give you his.&lt;/p&gt;
+
+&lt;p&gt;How many people can you say that about?
+how many people can make you feel rare and pure and special?
+how many people can make you feel… extraordinary?&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Simple progress bar using pure CSS and HTML5</title>
@@ -158,6 +181,8 @@ I began to use &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;ReactJ
    <updated>2014-08-12T00:00:00+02:00</updated>
    <id>http://xiaoque.github.io/daily%20thoughts/2014/08/12/quotes-from-time-traveler's-wife</id>
    <content type="html">&lt;hr&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://xiaoque.github.com/assets/images/post-sources/time-traveler&amp;#x27;s-wife.jpg&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;h4&gt;&amp;quot; Long ago, men went to sea, and women waited for them, standing on the edge of the water, scanning the horizon for the tiny ship. Now I wait for Henry. He vanishes unwillingly, without warning. I wait for him. Each moment that I wait feels like a year, an eternity. Each moment is as slow and transparent as glass. Through each moment I can see infinite moments lined up, waiting. Why has he gone where I cannot follow? ”&lt;/h4&gt;

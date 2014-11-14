@@ -1,7 +1,7 @@
 @import "constants";
 
 body {
-  background: @colorEggYellow;
+  background: @colorEnamelWhite;
 }
 
 .navbar {
@@ -32,7 +32,7 @@ body {
       }
       small {
         font-size: 117%;
-        padding: 33px 10px 10px 0;
+        padding: 33px 0px 10px;
         float: left;
         margin-left: -13px;
         color: @colorGreyMidDark;
@@ -41,10 +41,11 @@ body {
     
     .navbar-right{
       float: right;
-        margin: 2% 1% 1%;
+      margin: 2% 1% 1%;
         ul{
           list-style: none;
           margin:0;
+          float: right;
           li{
             height: 25px;
             float: left;
@@ -68,13 +69,14 @@ body {
               -ms-transition: all 0.5s ease;
               transition: all 0.5s ease;
               &:hover{
-                color: @colorGreyLight;
+                color: @colorAquaLit;
+                font-size: 22px;
               }
             }
 
             &.active a{
-              color:@colorCatHover;
-              font-size: 24px;
+              color:@colorAquaLit;
+              font-size: 22px;
             }
           }
         }
@@ -117,6 +119,7 @@ body {
 .posts {
   float: left;
   width: 70%;
+  padding: 1% 2%;
   .index-year {
     font-weight: bold;
     hr {
