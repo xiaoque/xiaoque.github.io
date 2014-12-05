@@ -193,15 +193,15 @@
 
 <p><strong>变量声明</strong>  </p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-java" data-lang="java">1
 2
 3
 4
-5</code></pre></div></td><td class="code"><div class="highlight"><pre>  <span class="kd">private</span> <span class="n">JTable</span> <span class="n">filmTable</span><span class="o">;</span>  
+5</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">private</span> <span class="n">JTable</span> <span class="n">filmTable</span><span class="o">;</span>  
     <span class="kd">private</span> <span class="n">DefaultTableModel</span> <span class="n">filmTableModel</span><span class="o">;</span>
     
     <span class="kd">private</span> <span class="n">Vector</span> <span class="n">filmVectorColName</span><span class="o">;</span>  
-    <span class="kd">private</span> <span class="n">Vector</span> <span class="n">filmVectorData</span><span class="o">;</span>  
+    <span class="kd">private</span> <span class="n">Vector</span> <span class="n">filmVectorData</span><span class="o">;</span>
 </pre></div>
 </td></tr></table>
   
@@ -210,7 +210,7 @@
 
 <p>这里我先初始化了table的数据，两个Vector分别记录的是Table的表头和里面的数据。  </p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java"> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-java" data-lang="java"> 1
  2
  3
  4
@@ -220,27 +220,27 @@
  8
  9
 10
-11</code></pre></div></td><td class="code"><div class="highlight"><pre> <span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">();</span>  
-    <span class="k">this</span><span class="o">.</span><span class="na">filmVectorData</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">();</span>
+11</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Vector</span><span class="o">();</span>  
+    <span class="k">this</span><span class="o">.</span><span class="na">filmVectorData</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Vector</span><span class="o">();</span>
     
     <span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="s">&quot;Title&quot;</span><span class="o">);</span>
     <span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="s">&quot;Year&quot;</span><span class="o">);</span>
     <span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="s">&quot;Language&quot;</span><span class="o">);</span>
     <span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="s">&quot;Nationality&quot;</span><span class="o">);</span>
     
-    <span class="k">this</span><span class="o">.</span><span class="na">filmTableModel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultTableModel</span><span class="o">();</span>  
+    <span class="k">this</span><span class="o">.</span><span class="na">filmTableModel</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DefaultTableModel</span><span class="o">();</span>  
     <span class="k">this</span><span class="o">.</span><span class="na">filmTableModel</span><span class="o">.</span><span class="na">setDataVector</span> <span class="o">(</span><span class="n">filmVectorData</span><span class="o">,</span><span class="n">filmVectorColName</span><span class="o">);</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">filmTable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTable</span><span class="o">(</span><span class="n">filmTableModel</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">filmTable</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">JTable</span><span class="o">(</span><span class="n">filmTableModel</span><span class="o">);</span>
 </pre></div>
 </td></tr></table>
   
 
 <p>然后将table添加到Frame中</p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-java" data-lang="java">1
 2
 3
-4</code></pre></div></td><td class="code"><div class="highlight"><pre>  <span class="kd">final</span> <span class="n">JScrollPane</span> <span class="n">scrollPane_1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JScrollPane</span><span class="o">(</span><span class="n">filmTable</span><span class="o">);</span>
+4</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">final</span> <span class="n">JScrollPane</span> <span class="n">scrollPane_1</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">JScrollPane</span><span class="o">(</span><span class="n">filmTable</span><span class="o">);</span>
     <span class="k">this</span><span class="o">.</span><span class="na">filmTable</span><span class="o">.</span><span class="na">setFillsViewportHeight</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
     <span class="n">scrollPane_1</span><span class="o">.</span><span class="na">setBounds</span><span class="o">(</span><span class="mi">400</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">350</span><span class="o">,</span> <span class="mi">70</span><span class="o">);</span>
     <span class="n">getContentPane</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">scrollPane_1</span><span class="o">);</span>
@@ -254,7 +254,7 @@
 
 <p>我需要的是是用户输入查询条件后，将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数</p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java"> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-java" data-lang="java"> 1
  2
  3
  4
@@ -264,9 +264,9 @@
  8
  9
 10
-11</code></pre></div></td><td class="code"><div class="highlight"><pre> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="o">(</span><span class="n">ArrayList</span> <span class="n">list</span><span class="o">,</span> <span class="n">Vector</span> <span class="n">data</span><span class="o">){</span>
+11</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="o">(</span><span class="n">ArrayList</span> <span class="n">list</span><span class="o">,</span> <span class="n">Vector</span> <span class="n">data</span><span class="o">){</span>
         <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-            <span class="n">Vector</span> <span class="n">vector</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">();</span>
+            <span class="n">Vector</span> <span class="n">vector</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Vector</span><span class="o">();</span>
             <span class="n">Movie</span> <span class="n">movie</span> <span class="o">=</span> <span class="o">(</span><span class="n">Movie</span><span class="o">)</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
             <span class="n">vector</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getTitle</span><span class="o">());</span>
             <span class="n">vector</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getYear</span><span class="o">());</span>
@@ -280,8 +280,8 @@
 
 <p>添加完数据后，更新显示  </p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="java">1
-2</code></pre></div></td><td class="code"><div class="highlight"><pre>  <span class="n">filmTable</span><span class="o">.</span><span class="na">invalidate</span><span class="o">();</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-java" data-lang="java">1
+2</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="n">filmTable</span><span class="o">.</span><span class="na">invalidate</span><span class="o">();</span>
     <span class="n">filmTable</span><span class="o">.</span><span class="na">updateUI</span><span class="o">();</span>
 </pre></div>
 </td></tr></table>
@@ -373,7 +373,7 @@
     	</a></li>
      
     	<li><a href="/categories.html#daily thoughts-ref">
-    		daily thoughts <span>2</span>
+    		daily thoughts <span>3</span>
     	</a></li>
      
     	<li><a href="/categories.html#css-ref">
@@ -412,7 +412,7 @@
      
     	<li><a href="/tags.html#LocalStorage-ref">LocalStorage <span>1</span></a></li>
      
-    	<li><a href="/tags.html#Quotes-ref">Quotes <span>2</span></a></li>
+    	<li><a href="/tags.html#Quotes-ref">Quotes <span>3</span></a></li>
      
     	<li><a href="/tags.html#ReactJS-ref">ReactJS <span>1</span></a></li>
      

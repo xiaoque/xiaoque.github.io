@@ -201,7 +201,7 @@
 
 <h5>Define Model</h5>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js"> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
  2
  3
  4
@@ -213,9 +213,7 @@
 10
 11
 12
-13
-14</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-<span class="kd">var</span> <span class="nx">Content</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+13</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Content</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
     <span class="nx">defaults</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>  
         <span class="k">return</span> <span class="p">{</span>  
             <span class="nx">text</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  
@@ -227,14 +225,14 @@
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">))</span> <span class="p">{</span>  
             <span class="k">this</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;empty&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;empty&quot;</span><span class="p">});</span>  
         <span class="p">}</span>  
-    <span class="p">});</span>  
+    <span class="p">});</span>
 </pre></div>
 </td></tr></table>
  
 
 <h5>Define Collection</h5>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js"> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
  2
  3
  4
@@ -252,9 +250,7 @@
 16
 17
 18
-19
-20</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-<span class="kd">var</span> <span class="nx">ContentCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+19</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">ContentCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
     <span class="nx">model</span><span class="o">:</span> <span class="nx">Content</span><span class="p">,</span>  
     <span class="k">this</span><span class="p">.</span><span class="nx">localStorage</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">LocalStorage</span><span class="p">(</span><span class="s2">&quot;contentList&quot;</span><span class="p">),</span>  
     <span class="nx">nextOrder</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>  
@@ -272,7 +268,7 @@
             <span class="k">this</span><span class="p">.</span><span class="nx">models</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">save</span><span class="p">({</span><span class="s2">&quot;order&quot;</span><span class="o">:</span> <span class="nx">i</span><span class="p">});</span>  
         <span class="p">}</span>  
     <span class="p">}</span> 
-<span class="p">});</span>  
+<span class="p">});</span>
 </pre></div>
 </td></tr></table>
 
@@ -280,7 +276,7 @@
 
 <h5>Define View</h5>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js"> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
  2
  3
  4
@@ -289,9 +285,7 @@
  7
  8
  9
-10
-11</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-    <span class="kd">var</span> <span class="nx">ContentView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+10</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">ContentView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
         <span class="nx">tagName</span><span class="o">:</span> <span class="s1">&#39;li&#39;</span><span class="p">,</span>  
         <span class="nx">template</span><span class="o">:</span> <span class="nx">_</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#searchTemplate&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">()),</span>  
 
@@ -308,7 +302,7 @@
 
 <h5>Define AppView</h5>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js"> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
  2
  3
  4
@@ -331,9 +325,7 @@
 21
 22
 23
-24
-25</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-<span class="kd">var</span> <span class="nx">AppView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+24</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">AppView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
     <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#contents&quot;</span><span class="p">),</span>  
     
     <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>  
@@ -356,27 +348,25 @@
     <span class="nx">addAll</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>  
         <span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>  
     <span class="p">}</span>  
-<span class="p">});</span>  
+<span class="p">});</span>
 </pre></div>
 </td></tr></table>
 
 <h5>HTML part</h5>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="html">1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-html" data-lang="html">1
 2
 3
-4
-5</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;contents&quot;</span><span class="nt">&gt;</span>  
+4</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;contents&quot;</span><span class="nt">&gt;</span>  
     <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;sortable&quot;</span><span class="nt">&gt;</span>  
     <span class="nt">&lt;/ul&gt;</span>  
-<span class="nt">&lt;/div&gt;</span>  
+<span class="nt">&lt;/div&gt;</span>
 </pre></div>
 </td></tr></table>
 
 <h5>template</h5>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="html">1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-html" data-lang="html">1
 2
 3
 4
@@ -384,7 +374,7 @@
     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;show-content&quot;</span><span class="o">&gt;</span>  
         <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;&lt;%-</span> <span class="nx">text</span> <span class="o">%&gt;&lt;</span><span class="err">/label&gt;  </span>
     <span class="o">&lt;</span><span class="err">/div&gt;  </span>
-<span class="nt">&lt;/script&gt;</span>   
+<span class="nt">&lt;/script&gt;</span>
 </pre></div>
 </td></tr></table>
 
@@ -394,11 +384,9 @@
 
 <p>Now initialise AppView and set up sortable.</p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js">1
-2
-3</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-    <span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContentCollection</span><span class="p">();</span>  
-    <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppView</span><span class="p">({</span><span class="nx">collection</span><span class="o">:</span> <span class="nx">collection</span><span class="p">});</span>  
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js">1
+2</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContentCollection</span><span class="p">();</span>  
+    <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppView</span><span class="p">({</span><span class="nx">collection</span><span class="o">:</span> <span class="nx">collection</span><span class="p">});</span>
 </pre></div>
 </td></tr></table>
   
@@ -407,21 +395,19 @@
 
 <p>Initialise sortable and trigger  </p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js">1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js">1
 2
 3
 4
 5
 6
-7
-8</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
+7</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
     <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#sortable&#39;</span><span class="p">).</span><span class="nx">sortable</span><span class="p">({</span>  
         <span class="nx">stop</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ui</span><span class="p">)</span> <span class="p">{</span>  
             <span class="nx">ui</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;drop&#39;</span><span class="p">,</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">index</span><span class="p">());</span>  
         <span class="p">}</span>  
     <span class="p">});</span>  
-<span class="p">});</span>  
+<span class="p">});</span>
 </pre></div>
 </td></tr></table>
   
@@ -430,21 +416,19 @@
 
 <p>So we define the event in ContentView  </p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js">1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js">1
 2
 3
 4
 5
 6
-7
-8</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-<span class="nx">events</span><span class="o">:</span> <span class="p">{</span>  
+7</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">events</span><span class="o">:</span> <span class="p">{</span>  
     <span class="s1">&#39;drop&#39;</span><span class="o">:</span> <span class="s1">&#39;drop&#39;</span>  
 <span class="p">},</span>  
 
 <span class="nx">drop</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">index</span><span class="p">){</span>  
     <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;update-sort&#39;</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">,</span> <span class="nx">index</span><span class="p">]);</span>  
-<span class="p">}</span>  
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
   
@@ -453,7 +437,7 @@
 
 <p>So in AppView we define </p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="js"> 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-js" data-lang="js"> 1
  2
  3
  4
@@ -466,9 +450,7 @@
 11
 12
 13
-14
-15</code></pre></div></td><td class="code"><div class="highlight"><pre>  
-<span class="nx">events</span><span class="o">:</span> <span class="p">{</span>  
+14</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">events</span><span class="o">:</span> <span class="p">{</span>  
     <span class="s1">&#39;update-sort&#39;</span><span class="o">:</span> <span class="s1">&#39;updateSort&#39;</span>  
 <span class="p">},</span>  
 
@@ -576,7 +558,7 @@
     	</a></li>
      
     	<li><a href="/categories.html#daily thoughts-ref">
-    		daily thoughts <span>2</span>
+    		daily thoughts <span>3</span>
     	</a></li>
      
     	<li><a href="/categories.html#css-ref">
@@ -615,7 +597,7 @@
      
     	<li><a href="/tags.html#LocalStorage-ref">LocalStorage <span>1</span></a></li>
      
-    	<li><a href="/tags.html#Quotes-ref">Quotes <span>2</span></a></li>
+    	<li><a href="/tags.html#Quotes-ref">Quotes <span>3</span></a></li>
      
     	<li><a href="/tags.html#ReactJS-ref">ReactJS <span>1</span></a></li>
      
@@ -641,7 +623,7 @@
                 Daily Workout Routine </a></li>
             
             
-            <li class="next"><a href="/daily%20thoughts/2014/08/12/quotes-from-time-traveler%27s-wife" title="Quotes from Time Traveler's Wife">
+            <li class="next"><a href="/daily%20thoughts/2014/08/12/quotes-from-time-traveler's-wife" title="Quotes from Time Traveler's Wife">
                 Next: Quotes from Time Traveler's Wife &rarr;</a></li>
             
         </ul>

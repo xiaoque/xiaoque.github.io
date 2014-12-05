@@ -189,8 +189,7 @@
 
 <p>The progress bar can be added using &lt;progress&gt; ; the progress value is determined by the value, min and max attributes.</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;progress</span> <span class="na">value=</span><span class="s">&quot;10&quot;</span> <span class="na">max=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;progress</span> <span class="na">value=</span><span class="s">&quot;10&quot;</span> <span class="na">max=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span></code></pre></div>
  
 
 <p><progress value="10" max="30"/></p>
@@ -205,26 +204,24 @@
 
 <p>In <strong>Chrome</strong> and <strong>Safari</strong>, the progress element is translate in this way</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">progress</span><span class="o">:</span><span class="nd">:-webkit-progress-bar</span> <span class="p">{</span>  
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">progress</span><span class="o">:</span><span class="nd">:-webkit-progress-bar</span> <span class="p">{</span>  
     <span class="c">/* style rules */</span>  
 <span class="p">}</span>  
 <span class="nt">progress</span><span class="o">:</span><span class="nd">:-webkit-progress-value</span> <span class="p">{</span>  
     <span class="c">/* style rules */</span>  
-<span class="p">}</span>  
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
   
 
 <p>And in Firfox it also has its special pseudo-class for progress  </p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">progress</span><span class="o">:</span><span class="nd">:-moz-progress-bar</span> <span class="p">{</span>  
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">progress</span><span class="o">:</span><span class="nd">:-moz-progress-bar</span> <span class="p">{</span>  
     <span class="c">/* style rules */</span>  
-<span class="p">}</span>  
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
   
 
 <p>With ReactJS, I use .less, a CSS pre-processor, I want to reuse the style of this progress bar just with different background color, and progress color, so I defined a mixin, as follow.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.progressBarMixin</span><span class="o">(</span><span class="k">@backgroundColor</span><span class="o">,</span><span class="k">@progressBarColor</span><span class="o">,</span> <span class="k">@borderRadius</span><span class="o">)</span><span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.progressBarMixin</span><span class="o">(</span><span class="k">@backgroundColor</span><span class="o">,</span><span class="k">@progressBarColor</span><span class="o">,</span> <span class="k">@borderRadius</span><span class="o">)</span><span class="p">{</span>
   <span class="nt">progress</span> <span class="p">{</span>
     <span class="k">background-color</span><span class="o">:</span> <span class="o">@</span><span class="n">backgroundColor</span><span class="p">;</span>
     <span class="k">border</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
@@ -245,16 +242,14 @@
     <span class="k">padding</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
     <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="o">@</span><span class="n">borderRadius</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
   
 
-<div class="highlight"><pre><code class="css"><span class="nc">.progressBarMixin</span><span class="o">(</span><span class="k">@colorGreyLight</span><span class="o">,</span><span class="k">@colorBlueElectric</span><span class="o">,</span> <span class="nt">50px</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.progressBarMixin</span><span class="o">(</span><span class="k">@colorGreyLight</span><span class="o">,</span><span class="k">@colorBlueElectric</span><span class="o">,</span> <span class="nt">50px</span><span class="o">)</span><span class="p">;</span>
       <span class="nt">progress</span> <span class="p">{</span>
         <span class="nt">height</span><span class="o">:</span> <span class="nt">25px</span><span class="o">;</span>
         <span class="nt">width</span><span class="o">:</span> <span class="nt">220px</span><span class="o">;</span>
-      <span class="p">}</span>
-</code></pre></div>
+      <span class="p">}</span></code></pre></div>
  
 
 <hr>
@@ -263,14 +258,13 @@
 
 <p>Because I use <a href="http://facebook.github.io/react/">ReactJS</a> to render my application, it has a great function </p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kr">boolean</span> <span class="nx">shouldComponentUpdate</span><span class="p">(</span><span class="nx">object</span> <span class="nx">nextProps</span><span class="p">,</span> <span class="nx">object</span> <span class="nx">nextState</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">boolean</span> <span class="nx">shouldComponentUpdate</span><span class="p">(</span><span class="nx">object</span> <span class="nx">nextProps</span><span class="p">,</span> <span class="nx">object</span> <span class="nx">nextState</span><span class="p">)</span></code></pre></div>
  
 
 <p>This function returns true by default, that means it will update your layout automatically when it detects some changes have been made.<br>
 So I got a function to caculate the progress like this.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">getProgressBarValue</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">getProgressBarValue</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">finished</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kd">var</span> <span class="nx">finishedSteps</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">storeCursor</span><span class="p">.</span><span class="nx">follow</span><span class="p">(</span><span class="s2">&quot;finishedSteps&quot;</span><span class="p">).</span><span class="nx">get</span><span class="p">();</span>
         <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">steps</span><span class="p">.</span><span class="nx">GROUP_NAMES</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
@@ -278,12 +272,10 @@ So I got a function to caculate the progress like this.</p>
             <span class="nx">finished</span> <span class="o">++</span><span class="p">;</span>
         <span class="p">});</span>
         <span class="k">return</span> <span class="p">(</span><span class="nx">finished</span> <span class="o">/</span> <span class="nx">OnboardingStepName</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div>
+    <span class="p">}</span></code></pre></div>
  
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;progress</span> <span class="na">value=</span><span class="s">{this.getProgressBarValue()}</span> <span class="na">max=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;&lt;/progress&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;progress</span> <span class="na">value=</span><span class="s">{this.getProgressBarValue()}</span> <span class="na">max=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;&lt;/progress&gt;</span></code></pre></div>
  
 
 <p>Finally, I got my progress bar.</p>
@@ -376,7 +368,7 @@ So I got a function to caculate the progress like this.</p>
     	</a></li>
      
     	<li><a href="/categories.html#daily thoughts-ref">
-    		daily thoughts <span>2</span>
+    		daily thoughts <span>3</span>
     	</a></li>
      
     	<li><a href="/categories.html#css-ref">
@@ -415,7 +407,7 @@ So I got a function to caculate the progress like this.</p>
      
     	<li><a href="/tags.html#LocalStorage-ref">LocalStorage <span>1</span></a></li>
      
-    	<li><a href="/tags.html#Quotes-ref">Quotes <span>2</span></a></li>
+    	<li><a href="/tags.html#Quotes-ref">Quotes <span>3</span></a></li>
      
     	<li><a href="/tags.html#ReactJS-ref">ReactJS <span>1</span></a></li>
      
