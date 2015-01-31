@@ -1,7 +1,7 @@
 ---
 layout: default
 type: post
-category: Daily thoughts
+category: Daily Thoughts
 title: Quotes from Marley & Me
 tag: [Quotes]
 ---

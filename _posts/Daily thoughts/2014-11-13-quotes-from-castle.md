@@ -1,7 +1,7 @@
 ---
 layout: default
 type: post
-category: Daily thoughts
+category: Daily Thoughts
 title: Quotes from Castle S07E06
 tag: [Quotes]
 ---
