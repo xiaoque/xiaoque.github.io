@@ -8,7 +8,7 @@ tag: [Quotes]
 ***
 
 
-__ L'Amour Change tout __
+> L'Amour Change tout 
  
  
  Le travail sans amour rend esclave  
