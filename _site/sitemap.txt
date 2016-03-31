@@ -1,13 +1,13 @@
 
-http://xiaoque.github.io/aboutMe.html
-http://xiaoque.github.io/archive.html
+http://xiaoque.github.io/aboutMe
+http://xiaoque.github.io/archive
 http://xiaoque.github.io/atom.xml
-http://xiaoque.github.io/categories.html
-http://xiaoque.github.io/index.html
-http://xiaoque.github.io/pages.html
+http://xiaoque.github.io/categories
+http://xiaoque.github.io/
+http://xiaoque.github.io/pages
 http://xiaoque.github.io/rss.xml
 http://xiaoque.github.io/sitemap.txt
-http://xiaoque.github.io/tags.html
+http://xiaoque.github.io/tags
 
 http://xiaoque.github.io/daily%20thoughts/2015/01/31/l'amour-change-tout
 http://xiaoque.github.io/daily%20thoughts/2014/11/13/quotes-from-castle
