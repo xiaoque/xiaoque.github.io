@@ -5,10 +5,8 @@ category: Daily Thoughts
 title: L'Amour Change tout
 tag: [Quotes]
 ---
-***
 
 
- 
  
  Le travail sans amour rend esclave  
  La justice sans amour rend impitoyable  

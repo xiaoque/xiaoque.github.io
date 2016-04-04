@@ -5,7 +5,7 @@ title: X,que
 ---
 {% include JB/setup %}
 
-<div class="posts">
+<div class="posts numberlist">
     {% for post in site.posts  %}
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -13,27 +13,27 @@ title: X,que
       {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
 
       {% if forloop.first %}
-        <h3 class="index-year">{{this_year}}</h3>
-        <h4 class="index-month"><hr/>{{this_month}}</h4>
-        <ul>
+        <span class="index-year">{{this_year}}</span>
+        <span class="index-month">{{this_month}}</span>
+        <ol>
       {% endif %}
 
-      <li> <div class="index-post-list-name"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> </div><span class="index-post-list-date">{{ post.date | date: "%B %e, %Y" }}</span> </li>
+      <li> <div class="index-post-list-name"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }} </a> </div> </li><div class="index-post-description">{{ post.description }} </div>
 
       {% if forloop.last %}
-        </ul>
+        </ol>
       {% else %}
         {% if this_year != next_year %}
-          </ul>
-          <h3 class="index-year"><hr/>{{next_year}}</h3>
-          <h4 class="index-month"><hr/>{{next_month}}</h4>
-          <ul>
+          </ol>
+          <span class="index-year"><hr/>{{next_year}}</span>
+          <span class="index-month">{{next_month}}</span>
+          <ol>
         {% else %}
           {% if this_month != next_month %}
-            </ul>
+            </ol>
             
-            <h4 class="index-month"><hr/>{{next_month}}</h4>
-            <ul>
+            <span class="index-month">{{next_month}}</span>
+            <ol>
           {% endif %}
         {% endif %}
       {% endif %}
@@ -41,14 +41,14 @@ title: X,que
 </div>
 
 <div class="index-right">
-<div class="index-category">
-    <div class="index-category-title"> Categories </div>
+<div class="category-title"> Categories </div>
+<div class="cate_box inline">
   {% assign categories_list = site.categories %}
   {% include JB/categories_list %}
 </div>
-
-<div class="index-tag">
-    <div class="index-tag-title"> Tags </div>
+<hr/>
+<div class="tag-title"> Tags </div>
+<div class="tag_box inline">
   {% assign tags_list = site.tags %}  
   {% include JB/tags_list %}
 </div>

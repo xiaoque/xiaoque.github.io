@@ -17,17 +17,17 @@
 
   .post-page-right{
     float: right;
-    width: 25%;
+    width: 24%;
     background: @colorAir;
-    border-radius: 11px;
-    .post-page-category {
+    border-style: dotted;
+    border-radius: 20px;
+    border-color: @colorIcecreamBlue;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+
+    .post-page-category, .post-page-tag{
       padding: 6%;
-      .category-title{
-        color: @colorColonialBlue;
-        font-size: 20px;
-        font-weight: bold;
-        margin: 2%;
-      }
+
       li{
         list-style: none;
         display: inline-block;
@@ -49,34 +49,10 @@
         }
       }
     }
-    .post-page-tag{
-      padding: 6%;
-      .tag-title{
-        color: @colorColonialBlue;
-        font-size: 20px;
-        font-weight: bold;
-        margin: 2%;
-      }
-      li{
-        list-style: none;
-        display: inline-block;
-        margin: 3px 0 3px 10px;
-        a {
-          padding: 3px 6px;
-          margin: 2px;
-          background: @colorCeramic;
-          color: #cc5f48;
-          border-radius: 3px;
-          text-decoration: none;
-          span {
-            vertical-align: super;
-            font-size: 0.8em;
-          }
-          &:hover {
-            background-color: @colorCashmerePink;
-          }
-        }
-      }
+    hr{
+    margin: 5px 0px;
+    border: 1px double;
+    color: @colorIcecreamBlue;
     }
   }
 

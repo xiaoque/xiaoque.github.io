@@ -51,7 +51,7 @@ body {
             float: left;
             margin-right: 0px;
             border-right: 1px solid @colorGreenDark;
-            padding: 0 20px;
+            padding: 0 15px;
             padding-top: 3px;
             &:last-child {
               border-right: none;
@@ -92,6 +92,10 @@ body {
   background: @colorWhite;
 }
 
+.container-narrow{
+  margin: 10px;
+}
+
 .wrapper {
   border: 1px dotted @colorGreyLight;
   border-top: none;
@@ -103,10 +107,11 @@ body {
 
 .row-fluid {
   min-height: 400px;
+  margin: 10px 5px;
 }
 
 .page-header {
-  padding-bottom: 9px;
+  padding: 5px;
   margin: 0;
   border-bottom: 2px solid @colorBlueElectricLight;
 }
@@ -121,25 +126,74 @@ body {
   width: 70%;
   padding: 1% 2%;
   .index-year {
+    float: left;
+    width: 100%;
     font-weight: bold;
+    font-size: 28px;
+    padding: 5px;
+    color: @colorTagbox;
     hr {
-      margin: 10px 0;
+      margin: 5px -5px 20px;
       border: 0;
-      border-top: 5px solid @colorGreyLight;
+      border-top: 5px dotted @colorIcecreamBlue;
     }
   }
   .index-month {
-    hr {
-      margin: 10px 0;
-      border: 0;
-      border-top: 3px solid #eeeeee;
-    }
+    padding: 10px;
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    color: @colorGreyMidDark;
+  }
+  .index-post-description{
+    margin: 1px 0px 10px 30px;
+    font-size: 13px;
+    font-style: italic;    
   }
 }
 
+.archive{
+  .archive-year{
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    font-size: 28px;
+    padding: 5px;
+    color: @colorTagbox;
+  }
+  .archive-month{
+    padding: 15px 15px 10px;
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    color: @colorGreyMidDark;
+  }
+}
+  .category-title, .tag-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: @colorPurple;
+    margin: 5px 0px 2px ;
+  }
+
+
 .index-right {
-  float: right;
-  width: 25%;
+  border-style: dotted;
+  border-radius: 20px;
+  border-color: @colorIcecreamBlue;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  margin: 0px 5px;
+  padding: 11px;
+  position: absolute;
+  left: 64%;
+  top: 210px;
+  width: 14.5%;
+  hr{
+    margin: 5px 0px;
+    border: 1px double;
+    color: @colorIcecreamBlue;
+  }
 }
 
 

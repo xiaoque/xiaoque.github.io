@@ -36,16 +36,15 @@
     </div>
 
     <div class="post-page-right">
-    <div class="post-page-category">
-        <div class="category-title"> Categories </div>
-        {% assign categories_list = site.categories %}
-        {% include JB/categories_list %}
-    </div>
-    <div class="post-page-tag">
-        <div class="tag-title"> Tags </div>
-        {% assign tags_list = site.tags %}
-        {% include JB/tags_list %}
-    </div>
+        <div class="post-page-category">
+            <div class="category-title"> Categories </div>
+            {% assign categories_list = site.categories %}
+            {% include JB/categories_list %}
+            <hr>
+            <div class="tag-title"> Tags </div>
+            {% assign tags_list = site.tags %}
+            {% include JB/tags_list %}
+        </div>
     </div>
 
     <hr>

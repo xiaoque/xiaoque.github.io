@@ -3,7 +3,7 @@ layout: default
 type: post
 category: CSS
 title: Simple progress bar using pure CSS and HTML5
-description: 
+description: HTML5 introduced a new element "progress" , which make it much easier to show progess bar. In this article, I just wanna share my experience to manipulate this element. 
 tag: [HTML5, CSS]
 ---
 

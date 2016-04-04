@@ -14,12 +14,14 @@ Usage:
         => 'for post in site.posts reversed'
       2) Next make sure to change 'post.previous.date' to:
         => 'post.next.date'
+        {{ post.date | date: "%B %e, %Y" }} 
         
 -->{% endcomment %}
 
 {% if site.JB.posts_collate.provider == "custom" %}
   {% include custom/posts_collate %}
 {% else %}
+  <div class="archive nestlist">
   {% for post in posts_collate  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -29,27 +31,28 @@ Usage:
     {% if forloop.first %}
       <span class="archive-year">{{this_year}}</span>
       <span class="archive-month">{{this_month}}</span>
-      <ul>
+      <ol>
     {% endif %}
   
-    <li> <div class="archive-post-list-name"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> </div><span class="archive-post-list-date">{{ post.date | date: "%B %e, %Y" }}</span> </li>
+    <li> <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>   {{ post.date | date: "%B %e, %Y" }} </li>
   
     {% if forloop.last %}
-      </ul>
+      </ol>
     {% else %}
       {% if this_year != next_year %}
-        </ul>
+        </ol>
         <span class="archive-year">{{next_year}}</span>
         <span class="archive-month">{{next_month}}</span>
-        <ul>
+        <ol>
       {% else %}    
         {% if this_month != next_month %}
-          </ul>
+          </ol>
           <span class="archive-month">{{next_month}}</span>
-          <ul>
+          <ol>
         {% endif %}
       {% endif %}
     {% endif %}
   {% endfor %}
+  </div>
 {% endif %}
 {% assign posts_collate = nil %}

@@ -3,7 +3,7 @@ layout: default
 type: post
 category: Java
 title: Java Swing JTable 简单使用
-description: Simple use of Java Swing JTable
+description: Simple use of Java Swing JTable, 主要是想用JTable 来显示用户查询到的数据，不涉及选中事件处理。
 tag: [Java,Swing]
 ---
 

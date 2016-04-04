@@ -9,6 +9,7 @@ http://xiaoque.github.io/rss.xml
 http://xiaoque.github.io/sitemap.txt
 http://xiaoque.github.io/tags
 
+http://xiaoque.github.io/css/2016/04/02/Updating-CSS-Style
 http://xiaoque.github.io/daily%20thoughts/2015/01/31/l'amour-change-tout
 http://xiaoque.github.io/daily%20thoughts/2014/11/13/quotes-from-castle
 http://xiaoque.github.io/daily%20thoughts/2014/09/14/quotes-from-marley-me
