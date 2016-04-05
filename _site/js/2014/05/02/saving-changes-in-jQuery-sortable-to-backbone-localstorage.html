@@ -22,6 +22,7 @@
     <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet/less" type="text/css" href="/assets/themes/twitter/css/customer/style.less"/>
     <link href="/assets/themes/twitter/css/customer/svgStyle.css" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/twitter/css/rouge.css" rel="stylesheet" type="text/css" media="all">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
     <!-- Le fav and touch icons -->
@@ -185,32 +186,17 @@
   <p>Aiming to using jQuery Sortable to display models stored in localStorage and saving the sequence after changing.</p>
 </blockquote>
 
-<p>###jQuery Sortable
-***
-Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can see an official demo here <a href="https://jqueryui.com/sortable/">jQuey sortable</a>, also there is a site that explain it very clearly, I found it’s very useful <a href="http://johnny.github.io/jquery-sortable/">jQuery Sortable</a>.</p>
+<p><strong>Jquery Sortable</strong> is a flexible, opinionated sorting plugin for jQuery, you can see an official demo here <a href="https://jqueryui.com/sortable/">jQuey sortable</a>, also there is a site that explain it very clearly, I found it’s very useful <a href="http://johnny.github.io/jquery-sortable/">jQuery Sortable</a>.</p>
 
-<p>###Getting started
-***</p>
+<hr />
+
+<h3 id="getting-started">Getting started</h3>
 
 <p>First is to define Model, Collection, View.</p>
 
-<p>#####Define Model</p>
+<h5 id="define-model">Define Model</h5>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14</pre></td><td class="code"><pre>  
-<span class="kd">var</span> <span class="nx">Content</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Content</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
 	<span class="na">defaults</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>  
 		<span class="k">return</span> <span class="p">{</span>  
 			<span class="na">text</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>  
@@ -222,32 +208,13 @@ Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can se
 		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"text"</span><span class="p">))</span> <span class="p">{</span>  
 			<span class="k">this</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span><span class="s2">"text"</span><span class="p">:</span> <span class="s2">"empty"</span><span class="p">,</span> <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"empty"</span><span class="p">});</span>  
         <span class="p">}</span>  
-    <span class="p">});</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+    <span class="p">});</span>  
+</code></pre>
+</div>
 
-<p>#####Define Collection</p>
+<h5 id="define-collection">Define Collection</h5>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></td><td class="code"><pre>  
-<span class="kd">var</span> <span class="nx">ContentCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">ContentCollection</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
 	<span class="na">model</span><span class="p">:</span> <span class="nx">Content</span><span class="p">,</span>  
 	<span class="k">this</span><span class="p">.</span><span class="na">localStorage</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">LocalStorage</span><span class="p">(</span><span class="s2">"contentList"</span><span class="p">),</span>  
 	<span class="na">nextOrder</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>  
@@ -265,66 +232,33 @@ Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can se
 			<span class="k">this</span><span class="p">.</span><span class="nx">models</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">save</span><span class="p">({</span><span class="s2">"order"</span><span class="p">:</span> <span class="nx">i</span><span class="p">});</span>  
 		<span class="p">}</span>  
 	<span class="p">}</span> 
-<span class="p">});</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="p">});</span>  
+</code></pre>
+</div>
 
 <p><em>Note: the comparator is to sort models in collection</em></p>
 
-<p>#####Define View</p>
+<h5 id="define-view">Define View</h5>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11</pre></td><td class="code"><pre>  
-	<span class="kd">var</span> <span class="nx">ContentView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
-        <span class="na">tagName</span><span class="p">:</span> <span class="s1">'li'</span><span class="p">,</span>  
-        <span class="na">template</span><span class="p">:</span> <span class="nx">_</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#searchTemplate'</span><span class="p">).</span><span class="nx">html</span><span class="p">()),</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">ContentView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+    <span class="na">tagName</span><span class="p">:</span> <span class="s1">'li'</span><span class="p">,</span>  
+    <span class="na">template</span><span class="p">:</span> <span class="nx">_</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#searchTemplate'</span><span class="p">).</span><span class="nx">html</span><span class="p">()),</span>  
 
-        <span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
-            <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()</span> <span class="p">)</span> <span class="p">);</span>  
-            <span class="k">return</span> <span class="k">this</span><span class="p">;</span>  
-        <span class="p">}</span>  
+    <span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
+        <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()</span> <span class="p">)</span> <span class="p">);</span>  
+        <span class="k">return</span> <span class="k">this</span><span class="p">;</span>  
+    <span class="p">}</span>  
 
-    <span class="p">});</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="p">});</span>
+
+</code></pre>
+</div>
 
 <p>This is the view shows each single model</p>
 
-<p>#####Define AppView</p>
+<h5 id="define-appview">Define AppView</h5>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></td><td class="code"><pre>  
-<span class="kd">var</span> <span class="nx">AppView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">AppView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>  
 	<span class="na">el</span><span class="p">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#contents"</span><span class="p">),</span>  
 	
 	<span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>  
@@ -347,109 +281,73 @@ Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can se
 	<span class="na">addAll</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>  
 		<span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>  
 	<span class="p">}</span>  
-<span class="p">});</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="p">});</span>  
+</code></pre>
+</div>
 
-<p>#####HTML part</p>
+<h5 id="html-part">HTML part</h5>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5</pre></td><td class="code"><pre>  
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"contents"</span><span class="nt">&gt;</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"contents"</span><span class="nt">&gt;</span>  
 	<span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"sortable"</span><span class="nt">&gt;</span>  
 	<span class="nt">&lt;/ul&gt;</span>  
-<span class="nt">&lt;/div&gt;</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>  
+</code></pre>
+</div>
 
-<h5 id="template">template</h5>
+<h5 id="template">Template</h5>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5</pre></td><td class="code"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/template"</span> <span class="na">id=</span><span class="s">"searchTemplate"</span><span class="nt">&gt;</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/template"</span> <span class="na">id=</span><span class="s">"searchTemplate"</span><span class="nt">&gt;</span>  
 	<span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"show-content"</span><span class="o">&gt;</span>  
 		<span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;&lt;%-</span> <span class="nx">text</span> <span class="o">%&gt;&lt;</span><span class="sr">/label&gt; </span><span class="err"> 
 </span>	<span class="o">&lt;</span><span class="sr">/div&gt; </span><span class="err"> 
-</span><span class="nt">&lt;/script&gt;</span>   <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+</span><span class="nt">&lt;/script&gt;</span>   
+</code></pre>
+</div>
 
-<h3 id="setting-up-sortable">Setting up Sortable</h3>
 <hr />
+
+<h4 id="setting-up-sortable">Setting up Sortable</h4>
 
 <p>Now initialise AppView and set up sortable.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3</pre></td><td class="code"><pre>  
-    <span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContentCollection</span><span class="p">();</span>  
-    <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppView</span><span class="p">({</span><span class="na">collection</span><span class="p">:</span> <span class="nx">collection</span><span class="p">});</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContentCollection</span><span class="p">();</span>  
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AppView</span><span class="p">({</span><span class="na">collection</span><span class="p">:</span> <span class="nx">collection</span><span class="p">});</span>  
+</code></pre>
+</div>
 
-<p>After this the whole page should be able to display models in content. Add models as you like.  </p>
+<p>After this the whole page should be able to display models in content. Add models as you like.</p>
 
-<p>Initialise sortable and trigger  </p>
+<p>Initialise sortable and trigger</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8</pre></td><td class="code"><pre>  
-<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  
 	<span class="nx">$</span><span class="p">(</span><span class="s1">'#sortable'</span><span class="p">).</span><span class="nx">sortable</span><span class="p">({</span>  
 		<span class="na">stop</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ui</span><span class="p">)</span> <span class="p">{</span>  
 			<span class="nx">ui</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'drop'</span><span class="p">,</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">index</span><span class="p">());</span>  
 		<span class="p">}</span>  
 	<span class="p">});</span>  
-<span class="p">});</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="p">});</span>  
+</code></pre>
+</div>
 
 <p>This event is triggered when sorting has stopped, you can see official document here <a href="http://api.jqueryui.com/sortable/#event-stop">event-stop</a>, it will trigger the item’s event ‘drop’, in this case, it’s ContentView.</p>
 
-<p>So we define the event in ContentView  </p>
+<p>So we define the event in ContentView</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8</pre></td><td class="code"><pre>  
-<span class="nx">events</span><span class="err">:</span> <span class="p">{</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">events</span><span class="err">:</span> <span class="p">{</span>  
 	<span class="s1">'drop'</span><span class="err">:</span> <span class="s1">'drop'</span>  
 <span class="p">},</span>  
 
 <span class="nx">drop</span><span class="err">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">index</span><span class="p">){</span>  
 	<span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'update-sort'</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">,</span> <span class="nx">index</span><span class="p">]);</span>  
-<span class="p">}</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="p">}</span>  
+</code></pre>
+</div>
 
-<p>Drop function also trigger an envent and passed 2 parameters, one is current dragged item, and the other is the position it dropped.  </p>
+<p>Drop function also trigger an envent and passed 2 parameters, one is current dragged item, and the other is the position it dropped.</p>
 
-<p>So in AppView we define </p>
+<p>So in AppView we define</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15</pre></td><td class="code"><pre>  
-<span class="nx">events</span><span class="err">:</span> <span class="p">{</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">events</span><span class="err">:</span> <span class="p">{</span>  
 	<span class="s1">'update-sort'</span><span class="err">:</span> <span class="s1">'updateSort'</span>  
 <span class="p">},</span>  
 
@@ -462,15 +360,16 @@ Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can se
 	<span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">model</span><span class="p">,{</span><span class="na">at</span><span class="p">:</span> <span class="nx">position</span><span class="p">});</span>  
 	<span class="k">this</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">models</span><span class="p">[</span><span class="nx">position</span><span class="p">].</span><span class="nx">save</span><span class="p">({</span><span class="s2">"order"</span><span class="p">:</span> <span class="nx">position</span><span class="p">});</span>  
 	<span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>  
-<span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <p>Once we sort models in collection, sortable will fetch models according to the sequence, so to save the changes we don’t have to change collection a lot, only need to change the order in model, and save it in localstorage.</p>
 
         </div>
 
         
-        <ul class="cate_box inline">
+        <ul class="cate_box cubelist">
             <li><i class="icon-folder-open"></i></li>
             
             
@@ -489,7 +388,7 @@ Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can se
         
 
         
-        <ul class="tag_box inline">
+        <ul class="tag_box cubelist">
             <li><i class="icon-tags"></i></li>
             
             
@@ -530,7 +429,7 @@ Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can se
     </div>
 
     <div class="post-page-right">
-        <div class="post-page-category">
+        <div class="post-page-category cubelist">
             <div class="category-title"> Categories </div>
             
             

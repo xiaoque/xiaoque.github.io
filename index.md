@@ -42,13 +42,13 @@ title: X,que
 
 <div class="index-right">
 <div class="category-title"> Categories </div>
-<div class="cate_box inline">
+<div class="cate_box cubelist">
   {% assign categories_list = site.categories %}
   {% include JB/categories_list %}
 </div>
 <hr/>
 <div class="tag-title"> Tags </div>
-<div class="tag_box inline">
+<div class="tag_box cubelist">
   {% assign tags_list = site.tags %}  
   {% include JB/tags_list %}
 </div>

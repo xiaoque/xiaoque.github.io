@@ -31,23 +31,29 @@ Usage:
     {% if forloop.first %}
       <span class="archive-year">{{this_year}}</span>
       <span class="archive-month">{{this_month}}</span>
+      <div class="list">
       <ol>
     {% endif %}
   
     <li> <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>   {{ post.date | date: "%B %e, %Y" }} </li>
   
     {% if forloop.last %}
+      </div>
       </ol>
     {% else %}
       {% if this_year != next_year %}
+        </div>
         </ol>
         <span class="archive-year">{{next_year}}</span>
         <span class="archive-month">{{next_month}}</span>
+        <div class="list">
         <ol>
       {% else %}    
         {% if this_month != next_month %}
+          </div>
           </ol>
           <span class="archive-month">{{next_month}}</span>
+          <div class="list">
           <ol>
         {% endif %}
       {% endif %}

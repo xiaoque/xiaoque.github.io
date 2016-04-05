@@ -22,6 +22,7 @@
     <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet/less" type="text/css" href="/assets/themes/twitter/css/customer/style.less"/>
     <link href="/assets/themes/twitter/css/customer/svgStyle.css" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/twitter/css/rouge.css" rel="stylesheet" type="text/css" media="all">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
     <!-- Le fav and touch icons -->
@@ -189,34 +190,21 @@
 
 <p><em>通过网上查询到的文章来看，基本上都是使用array来存储JTable里的数据，但是array便于删除，我更希望用链表的方式来存储数据，然后发现可以使用Vector来代替array。</em></p>
 
-<p><strong>变量声明</strong>  </p>
+<p><strong>变量声明</strong></p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5</pre></td><td class="code"><pre>	<span class="kd">private</span> <span class="n">JTable</span> <span class="n">filmTable</span><span class="o">;</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code>	<span class="kd">private</span> <span class="n">JTable</span> <span class="n">filmTable</span><span class="o">;</span>  
 	<span class="kd">private</span> <span class="n">DefaultTableModel</span> <span class="n">filmTableModel</span><span class="o">;</span>
 	
 	<span class="kd">private</span> <span class="n">Vector</span> <span class="n">filmVectorColName</span><span class="o">;</span>  
-	<span class="kd">private</span> <span class="n">Vector</span> <span class="n">filmVectorData</span><span class="o">;</span>  <span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+	<span class="kd">private</span> <span class="n">Vector</span> <span class="n">filmVectorData</span><span class="o">;</span>  
+</code></pre>
+</div>
 
-<p><strong>初始化</strong>  </p>
+<p><strong>初始化</strong></p>
 
-<p>这里我先初始化了table的数据，两个Vector分别记录的是Table的表头和里面的数据。  </p>
+<p>这里我先初始化了table的数据，两个Vector分别记录的是Table的表头和里面的数据。</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11</pre></td><td class="code"><pre>	<span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">();</span>  
+<div class="highlighter-rouge"><pre class="highlight"><code>	<span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">();</span>  
 	<span class="k">this</span><span class="o">.</span><span class="na">filmVectorData</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">();</span>
 	
 	<span class="k">this</span><span class="o">.</span><span class="na">filmVectorColName</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="s">"Title"</span><span class="o">);</span>
@@ -226,38 +214,27 @@
 	
 	<span class="k">this</span><span class="o">.</span><span class="na">filmTableModel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultTableModel</span><span class="o">();</span>  
 	<span class="k">this</span><span class="o">.</span><span class="na">filmTableModel</span><span class="o">.</span><span class="na">setDataVector</span> <span class="o">(</span><span class="n">filmVectorData</span><span class="o">,</span><span class="n">filmVectorColName</span><span class="o">);</span>
-	<span class="k">this</span><span class="o">.</span><span class="na">filmTable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTable</span><span class="o">(</span><span class="n">filmTableModel</span><span class="o">);</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+	<span class="k">this</span><span class="o">.</span><span class="na">filmTable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JTable</span><span class="o">(</span><span class="n">filmTableModel</span><span class="o">);</span>
+</code></pre>
+</div>
 
 <p>然后将table添加到Frame中</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4</pre></td><td class="code"><pre>	<span class="kd">final</span> <span class="n">JScrollPane</span> <span class="n">scrollPane_1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JScrollPane</span><span class="o">(</span><span class="n">filmTable</span><span class="o">);</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>	<span class="kd">final</span> <span class="n">JScrollPane</span> <span class="n">scrollPane_1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JScrollPane</span><span class="o">(</span><span class="n">filmTable</span><span class="o">);</span>
 	<span class="k">this</span><span class="o">.</span><span class="na">filmTable</span><span class="o">.</span><span class="na">setFillsViewportHeight</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
 	<span class="n">scrollPane_1</span><span class="o">.</span><span class="na">setBounds</span><span class="o">(</span><span class="mi">400</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">350</span><span class="o">,</span> <span class="mi">70</span><span class="o">);</span>
-	<span class="n">getContentPane</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">scrollPane_1</span><span class="o">);</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+	<span class="n">getContentPane</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">scrollPane_1</span><span class="o">);</span>
+</code></pre>
+</div>
 
 <p>初始化后能看到JTable基本成这个样子<br />
 <img src="http://xiaoque.github.com/assets/images/post-sources/2014-04-22-JTable-init.png" alt="image" /></p>
 
-<p><strong>赋值</strong>  </p>
+<p><strong>赋值</strong></p>
 
 <p>我需要的是是用户输入查询条件后，将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11</pre></td><td class="code"><pre>	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="p">(</span><span class="n">ArrayList</span> <span class="n">list</span><span class="o">,</span> <span class="n">Vector</span> <span class="n">data</span><span class="o">){</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="p">(</span><span class="n">ArrayList</span> <span class="n">list</span><span class="o">,</span> <span class="n">Vector</span> <span class="n">data</span><span class="o">){</span>
 		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
 			<span class="n">Vector</span> <span class="n">vector</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector</span><span class="o">();</span>
 			<span class="n">Movie</span> <span class="n">movie</span> <span class="o">=</span> <span class="o">(</span><span class="n">Movie</span><span class="o">)</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
@@ -267,15 +244,16 @@
 			<span class="n">vector</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getNation</span><span class="o">());</span>
 			<span class="n">data</span><span class="o">.</span><span class="na">addElement</span><span class="o">(</span><span class="n">vector</span><span class="o">);</span>
 		<span class="o">}</span>
-	<span class="o">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+	<span class="o">}</span>
+</code></pre>
+</div>
 
-<p>添加完数据后，更新显示  </p>
+<p>添加完数据后，更新显示</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre>	<span class="n">filmTable</span><span class="o">.</span><span class="na">invalidate</span><span class="o">();</span>
-	<span class="n">filmTable</span><span class="o">.</span><span class="na">updateUI</span><span class="o">();</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>	<span class="n">filmTable</span><span class="o">.</span><span class="na">invalidate</span><span class="o">();</span>
+	<span class="n">filmTable</span><span class="o">.</span><span class="na">updateUI</span><span class="o">();</span>
+</code></pre>
+</div>
 
 <p>最后JTable 显示为这样<br />
 <img src="http://xiaoque.github.com/assets/images/post-sources/2014-04-22-JTable-data.png" alt="image" /></p>
@@ -284,7 +262,7 @@
         </div>
 
         
-        <ul class="cate_box inline">
+        <ul class="cate_box cubelist">
             <li><i class="icon-folder-open"></i></li>
             
             
@@ -303,7 +281,7 @@
         
 
         
-        <ul class="tag_box inline">
+        <ul class="tag_box cubelist">
             <li><i class="icon-tags"></i></li>
             
             
@@ -340,7 +318,7 @@
     </div>
 
     <div class="post-page-right">
-        <div class="post-page-category">
+        <div class="post-page-category cubelist">
             <div class="category-title"> Categories </div>
             
             

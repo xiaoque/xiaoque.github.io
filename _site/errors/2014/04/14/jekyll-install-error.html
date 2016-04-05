@@ -22,6 +22,7 @@
     <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet/less" type="text/css" href="/assets/themes/twitter/css/customer/style.less"/>
     <link href="/assets/themes/twitter/css/customer/svgStyle.css" rel="stylesheet" type="text/css">
+    <link href="/assets/themes/twitter/css/rouge.css" rel="stylesheet" type="text/css" media="all">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js"></script>
     <!-- Le fav and touch icons -->
@@ -181,11 +182,11 @@
         <hr/>
 
         <div class="content">
-            <p>###安装环境的过程中碰到问题:</p>
+            <h3 id="section">安装环境的过程中碰到问题:</h3>
 
 <p>安装了Ruby和Rubygem后开始安装Jekyll,没想到出现了如下问题</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">Building native extensions.  This could take a while...
+<div class="highlighter-rouge"><pre class="highlight"><code>Building native extensions.  This could take a while...
 ERROR:  Error installing jekyll:
     ERROR: Failed to build gem native extension.
 
@@ -210,25 +211,29 @@ make: *** [stemmer.bundle] Error 1
 
 
 Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2 for inspection.
-Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.out</code></pre></figure>
+Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.out
+</code></pre>
+</div>
 
 <p>检查了一下版本：<br />
 - <strong>Ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]</strong><br />
 - <strong>Gem 2.2.2</strong><br />
 - <strong>Python 2.7.5</strong><br />
-- <strong>Mac OS X(10.9.2)</strong>  </p>
+- <strong>Mac OS X(10.9.2)</strong></p>
 
-<p>网上查询错误发现各种说法都，最后查了很多问答最终参考了这里 <a href="https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283">Unable to install cheatset #2</a>  </p>
+<p>网上查询错误发现各种说法都，最后查了很多问答最终参考了这里 <a href="https://github.com/Kapeli/cheatset/issues/2#issuecomment-37369283">Unable to install cheatset #2</a></p>
 
 <p>只需将原本的安装语句 <code class="highlighter-rouge">sudo gem install jekyll</code>换成</p>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll</code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo <span class="nv">ARCHFLAGS</span><span class="o">=</span>-Wno-error<span class="o">=</span>unused-command-line-argument-hard-error-in-future gem install jekyll
+</code></pre>
+</div>
 
 
         </div>
 
         
-        <ul class="cate_box inline">
+        <ul class="cate_box cubelist">
             <li><i class="icon-folder-open"></i></li>
             
             
@@ -247,7 +252,7 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
         
 
         
-        <ul class="tag_box inline">
+        <ul class="tag_box cubelist">
             <li><i class="icon-tags"></i></li>
             
             
@@ -286,7 +291,7 @@ Results logged to /Library/Ruby/Gems/2.0.0/gems/fast-stemmer-1.0.2/ext/gem_make.
     </div>
 
     <div class="post-page-right">
-        <div class="post-page-category">
+        <div class="post-page-category cubelist">
             <div class="category-title"> Categories </div>
             
             

@@ -6,14 +6,14 @@ group: navigation
 ---
 {% include JB/setup %}
 
-<ul class="cate_box inline">
+<ul class="cate_box cubelist">
   {% assign categories_list = site.categories %}
   {% include JB/categories_list %}
 </ul>
 
 
 {% for category in site.categories %} 
-  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+  <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h3>
   <ul>
     {% assign pages_list = category[1] %}  
     {% include JB/pages_list %}

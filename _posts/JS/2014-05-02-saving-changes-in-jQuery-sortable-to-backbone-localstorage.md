@@ -9,19 +9,20 @@ tag: [jQuery,Backbone,Sortable,LocalStorage]
 
 > Aiming to using jQuery Sortable to display models stored in localStorage and saving the sequence after changing.
 
-###jQuery Sortable
+
+__Jquery Sortable__ is a flexible, opinionated sorting plugin for jQuery, you can see an official demo here [jQuey sortable](https://jqueryui.com/sortable/), also there is a site that explain it very clearly, I found it's very useful [jQuery Sortable](http://johnny.github.io/jquery-sortable/).
+
+
 ***
-Jquery Sortable is a flexible, opinionated sorting plugin for jQuery, you can see an official demo here [jQuey sortable](https://jqueryui.com/sortable/), also there is a site that explain it very clearly, I found it's very useful [jQuery Sortable](http://johnny.github.io/jquery-sortable/).
 
-
-
-###Getting started
-***
+### Getting started
 
 First is to define Model, Collection, View.
 
-#####Define Model
-{% highlight js linenos=table %}  
+##### Define Model
+
+
+```javascript
 var Content = Backbone.Model.extend({  
 	defaults: function () {  
 		return {  
@@ -35,10 +36,13 @@ var Content = Backbone.Model.extend({
 			this.set({"text": "empty", "title": "empty"});  
         }  
     });  
-{% endhighlight %} 
+``` 
+  
 
-#####Define Collection
-{% highlight js linenos=table %}  
+##### Define Collection
+
+
+```javascript
 var ContentCollection = Backbone.Collection.extend({  
 	model: Content,  
 	this.localStorage: new Backbone.LocalStorage("contentList"),  
@@ -58,29 +62,36 @@ var ContentCollection = Backbone.Collection.extend({
 		}  
 	} 
 });  
-{% endhighlight %}
+``` 
 
 _Note: the comparator is to sort models in collection_
+  
 
-#####Define View
-{% highlight js linenos=table %}  
-	var ContentView = Backbone.View.extend({  
-        tagName: 'li',  
-        template: _.template($('#searchTemplate').html()),  
+##### Define View
 
-        render: function() {  
-            this.$el.html( this.template( this.model.toJSON() ) );  
-            return this;  
-        }  
 
-    });
+```javascript
+var ContentView = Backbone.View.extend({  
+    tagName: 'li',  
+    template: _.template($('#searchTemplate').html()),  
 
-{% endhighlight %}
+    render: function() {  
+        this.$el.html( this.template( this.model.toJSON() ) );  
+        return this;  
+    }  
+
+});
+
+``` 
+
 
 This is the view shows each single model
+  
 
-#####Define AppView
-{% highlight js linenos=table %}  
+##### Define AppView
+
+
+```javascript
 var AppView = Backbone.View.extend({  
 	el: $("#contents"),  
 	
@@ -105,43 +116,51 @@ var AppView = Backbone.View.extend({
 		this.collection.each(this.add, this);  
 	}  
 });  
-{% endhighlight %}
+``` 
+  
 
-#####HTML part
+##### HTML part
 
-{% highlight html linenos=table %}  
+
+```html
 <div id="contents">  
 	<ul id="sortable">  
 	</ul>  
 </div>  
-{% endhighlight %}
+``` 
+  
 
-##### template
+##### Template
 
-{% highlight html linenos=table %}
+
+```html
 <script type="text/template" id="searchTemplate">  
 	<div class="show-content">  
 		<label><%- text %></label>  
 	</div>  
 </script>   
-{% endhighlight %}
+``` 
 
-
-### Setting up Sortable
+  
 ***
+
+
+#### Setting up Sortable
 
 Now initialise AppView and set up sortable.
 
-{% highlight js linenos=table %}  
-    var collection = new ContentCollection();  
-    var app = new AppView({collection: collection});  
-{% endhighlight %}  
+
+```javascript
+var collection = new ContentCollection();  
+var app = new AppView({collection: collection});  
+``` 
 
 After this the whole page should be able to display models in content. Add models as you like.  
 
 
 Initialise sortable and trigger  
-{% highlight js linenos=table %}  
+
+```javascript
 $(document).ready(function() {  
 	$('#sortable').sortable({  
 		stop: function (event, ui) {  
@@ -149,13 +168,14 @@ $(document).ready(function() {
 		}  
 	});  
 });  
-{% endhighlight %}  
+``` 
 
 This event is triggered when sorting has stopped, you can see official document here [event-stop](http://api.jqueryui.com/sortable/#event-stop), it will trigger the item's event 'drop', in this case, it's ContentView.
 
 So we define the event in ContentView  
 
-{% highlight js linenos=table %}  
+
+```javascript 
 events: {  
 	'drop': 'drop'  
 },  
@@ -163,13 +183,13 @@ events: {
 drop: function(event, index){  
 	this.$el.trigger('update-sort', [this.model, index]);  
 }  
-{% endhighlight %}  
+``` 
 
 Drop function also trigger an envent and passed 2 parameters, one is current dragged item, and the other is the position it dropped.  
  
 So in AppView we define 
  
-{% highlight js linenos=table %}  
+```javascript
 events: {  
 	'update-sort': 'updateSort'  
 },  
@@ -184,7 +204,7 @@ updateSort: function(event, model, position){
 	this.collection.models[position].save({"order": position});  
 	this.render();  
 }
-{% endhighlight %}  
+``` 
 
 
 Once we sort models in collection, sortable will fetch models according to the sequence, so to save the changes we don't have to change collection a lot, only need to change the order in model, and save it in localstorage.

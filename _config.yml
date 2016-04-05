@@ -5,8 +5,14 @@ img_url: http://xiaoque.github.com/assets/images
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 markdown: kramdown
-
 highlighter: rouge
+
+kramdown:
+  input: GFM
+  enable_coderay: false
+  line_numbers: true
+  start_line: 1
+  syntax_highlighter: rouge
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.

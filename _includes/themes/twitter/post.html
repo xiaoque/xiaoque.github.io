@@ -17,7 +17,7 @@
         </div>
 
         {% unless page.categories == empty %}
-        <ul class="cate_box inline">
+        <ul class="cate_box cubelist">
             <li><i class="icon-folder-open"></i></li>
             {% assign categories_list = page.categories %}
             {% include JB/categories_list %}
@@ -25,7 +25,7 @@
         {% endunless %}
 
         {% unless page.tags == empty %}
-        <ul class="tag_box inline">
+        <ul class="tag_box cubelist">
             <li><i class="icon-tags"></i></li>
             {% assign tags_list = page.tags %}
             {% include JB/tags_list %}
@@ -36,7 +36,7 @@
     </div>
 
     <div class="post-page-right">
-        <div class="post-page-category">
+        <div class="post-page-category cubelist">
             <div class="category-title"> Categories </div>
             {% assign categories_list = site.categories %}
             {% include JB/categories_list %}

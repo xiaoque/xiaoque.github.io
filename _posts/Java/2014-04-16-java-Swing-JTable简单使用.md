@@ -18,18 +18,20 @@ _通过网上查询到的文章来看，基本上都是使用array来存储JTabl
 
 __变量声明__  
 
-{% highlight java linenos=table %}
+
+```java
 	private JTable filmTable;  
 	private DefaultTableModel filmTableModel;
 	
 	private Vector filmVectorColName;  
 	private Vector filmVectorData;  
-{% endhighlight %}  
+``` 
 
 __初始化__  
 
 这里我先初始化了table的数据，两个Vector分别记录的是Table的表头和里面的数据。  
-{% highlight java linenos=table %}
+
+```java
 	this.filmVectorColName = new Vector();  
 	this.filmVectorData = new Vector();
 	
@@ -41,14 +43,16 @@ __初始化__
 	this.filmTableModel = new DefaultTableModel();  
 	this.filmTableModel.setDataVector (filmVectorData,filmVectorColName);
 	this.filmTable = new JTable(filmTableModel);
-{% endhighlight %}  
+``` 
+
 然后将table添加到Frame中
-{% highlight java linenos=table %}
+
+```java
 	final JScrollPane scrollPane_1 = new JScrollPane(filmTable);
 	this.filmTable.setFillsViewportHeight(true);
 	scrollPane_1.setBounds(400, 30, 350, 70);
 	getContentPane().add(scrollPane_1);
-{% endhighlight %}
+``` 
 
 初始化后能看到JTable基本成这个样子  
 ![image]({{site.img_url}}/post-sources/2014-04-22-JTable-init.png)
@@ -56,7 +60,8 @@ __初始化__
 __赋值__  
 
 我需要的是是用户输入查询条件后，将获得的数据通过JTable显示出来，于是我在查询按钮的触发函数中添加了更改内容的函数
-{% highlight java linenos=table %}
+
+```java
 	public void setData(ArrayList list, Vector data){
 		for(int i = 0; i < list.size() ; i++){
 			Vector vector = new Vector();
@@ -68,12 +73,14 @@ __赋值__
 			data.addElement(vector);
 		}
 	}
-{% endhighlight %}
+``` 
+
 添加完数据后，更新显示  
-{% highlight java linenos=table %}
+
+```java
 	filmTable.invalidate();
 	filmTable.updateUI();
-{% endhighlight %}
+``` 
 
 最后JTable 显示为这样  
 ![image]({{site.img_url}}/post-sources/2014-04-22-JTable-data.png)
