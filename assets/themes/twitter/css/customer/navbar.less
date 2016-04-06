@@ -212,9 +212,58 @@ body {
   }
 }
 
-.aboutme{
-  .title{
+.me{
   font-family: 'Gloria Hallelujah', cursive;
+  .title{
+    margin: 1em 37em 1em 2em;
+    padding-bottom: .5em;
+    border-bottom: @colorLakeBlue;
+    border-bottom-style: solid;
+  }
+  h3{
+    color: @colorCherryPink;
+  }
+  .mephoto{
+    width: 30%;
+    float: left;
+    margin: 3em 1em 3em 6em;
+    overflow: visible;
+      img{
+      width: 70%;
+      height: inherit;
+      border: @colorAir;
+      border-style: solid;
+      border-width: .5em;
+      /* Firefox */
+      -moz-transform:rotate(12deg);
+      /* Safari and Chrome */
+      -webkit-transform:rotate(12deg);
+      /* Opera */
+      -o-transform:rotate(12deg);
+      /* IE9 */
+      -ms-transform:rotate(12deg);
+    }
+  }
+  .meintro{
+    width: 60%;
+    float: right;
+    margin: 3em 1em;
+    strong{
+      font-size: 120%;
+      color: @colorLakeBlue;
+    }
+    hr{
+      margin: 2em 0 0 0;
+    }
+  }
+  .metext{
+    border-bottom: @colorGrassGreen;
+    border-bottom-style: dashed;
+    border-bottom-width: .4em;
+    margin: 0em 1em 1em 0;
+  }
+  .mecontact{
+    margin-left: 10%;
   }
 }
 
