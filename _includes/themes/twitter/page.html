@@ -1,5 +1,5 @@
 {% if page.type != "index" %}
-	{% if page.title != "About me" %}
+	{% if page.title != "About me" and page.title != 404 %}
 	<div class="page-header">
 	<h1 class="index-title">{{ page.title }}
         {% if page.tagline %}
@@ -15,7 +15,9 @@
 
 <div class="row-fluid">
     <div class="span12">
+        {% if content != null %}
         {{ content }}
+        {% endif %}
     </div>
 </div>
 
