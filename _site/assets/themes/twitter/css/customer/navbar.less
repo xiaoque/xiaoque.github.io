@@ -1,0 +1,222 @@
+@import "constants";
+
+body {
+  background: @colorEnamelWhite;
+}
+
+.navbar {
+  font-family: 'Gloria Hallelujah', cursive;
+  overflow: visible;
+  width: 104%;
+  margin-left: -2%;
+  margin-bottom: 0;
+  background: @colorMilkWhite;
+  border-radius: 0.8em;
+  -webkit-box-shadow: 0 1px 0.8em rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 0.8em rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 0.8em rgba(0, 0, 0, 0.065);
+  .navbar-box-border {
+    width: 98.5%;
+    height: 100%;
+    margin: 0.4em 0.4em 0 0.4em;
+    border-radius: 0.6em;
+    border: 1px dotted @colorGreyMidDark;
+    display: inline-block;
+
+    .navbar-left {
+      float: left;
+      .brand {
+        padding: .6em 1em 1em 1.5em;
+        font-size: 200%;
+        color: @colorBlueElectricLight;
+        font-weight: bold;
+      }
+      small {
+        font-size: 117%;
+        padding: 1.9em 0 .6em;
+        float: left;
+        margin-left: -1em;
+        color: @colorGreyMidDark;
+      }
+    }
+    
+    .navbar-right{
+      float: right;
+        ul{
+          margin: 1.2em 0 0 0;
+          list-style: none;
+          float: right;
+          li{        
+            height: 2em;
+            float: left;
+            margin-right: 0px;
+            border-right: 1px solid @colorGreenDark;
+            padding: 0 1.2em;
+            padding-top: .2em;
+            &:last-child {
+              border-right: none;
+            }
+
+            & a {
+              text-decoration: none;
+              color: @colorLakeBlue;
+              font-size: 120%;
+              text-transform: uppercase;
+
+              -webkit-transition: all 0.5s ease;
+              -moz-transition: all 0.5s ease;
+              -o-transition: all 0.5s ease;
+              -ms-transition: all 0.5s ease;
+              transition: all 0.5s ease;
+              &:hover{
+                color: @colorAquaLit;
+                font-size: 150%;
+              }
+            }
+
+            &.active a{
+              color:@colorAquaLit;
+              font-size: 150%;
+            }
+          }
+        }
+      }
+
+  }
+}
+
+#main-container {
+  width: 90%;
+  margin: 0 auto 1em;
+  padding: 0 .4em .4em;
+  background: @colorWhite;
+}
+
+.container-narrow{
+  margin: .6em;
+}
+
+.wrapper {
+  border: 1px dotted @colorGreyLight;
+  border-top: none;
+}
+
+.index-title{
+  font-family: 'Gloria Hallelujah', cursive;
+  color: @colorPurple;
+}
+
+.row-fluid {
+  min-height: 400px;
+  margin: .8em .4em;
+}
+
+.page-header {
+  padding: 1em .4em 2em;
+  margin: 0;
+  border-bottom: 2px solid @colorBlueElectricLight;
+}
+
+.header-svg {
+  width: 50px;
+  height: 50px;
+}
+
+.posts {
+  float: left;
+  width: 70%;
+  padding: 1% 2%;
+  .index-year {
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 180%;
+    padding: .2em;
+    color: @colorTagbox;
+    hr {
+      margin: .3em 1em 1em 0;
+      border: 0;
+      border-top: 5px dotted @colorIcecreamBlue;
+    }
+  }
+  .index-month {
+    padding: .5em;
+    font-size: 140%;
+    float: left;
+    width: 100%;
+    color: @colorGreyMidDark;
+  }
+  .index-post-description{
+    margin: .1em 0 1em 3.5em;
+    font-size: 90%;
+    font-style: italic;    
+  }
+}
+
+.archive{
+  .archive-year{
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    font-size: 170%;
+    padding: .4em;
+    color: @colorTagbox;
+  }
+  .archive-month{
+    padding: .4em 0em .4em 1em;
+    font-size: 140%;
+    float: left;
+    width: 100%;
+    color: @colorGreyMidDark;
+  }
+  .list{
+    margin: .4em 0em .4em 3.2em;
+    float: left;
+    a{
+      font-size: 125%;
+      padding: .2em;
+    }
+  }
+}
+
+.pages{
+  padding: 0.3em;
+  li{
+    font-size: 125%;
+  }
+}
+.category-title, .tag-title{
+  font-size: 140%;
+  font-weight: bold;
+  color: @colorPurple;
+  margin: .3em 0 .1em ;
+}
+
+
+.index-right {
+  border-style: dotted;
+  border-radius: 1.4em;
+  border-color: @colorIcecreamBlue;
+  -moz-border-radius: 1.4em;
+  -webkit-border-radius: 1.4em;
+  margin: 0em .3em;
+  padding: .8em;
+  position: absolute;
+  right: 6%;
+  top: 28%;
+  width: 21%;
+  hr{
+    margin: .3em 0;
+    border: 1px double;
+    color: @colorIcecreamBlue;
+  }
+}
+
+.aboutme{
+  .title{
+  font-family: 'Gloria Hallelujah', cursive;
+  }
+}
+
+
+
