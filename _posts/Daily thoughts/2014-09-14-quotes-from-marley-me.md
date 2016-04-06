@@ -6,7 +6,7 @@ title: Quotes from Marley & Me
 tag: [Quotes]
 ---
 
-***
+
 
  ![image]({{site.img_url}}/post-sources/marley-and-me.jpg)
   

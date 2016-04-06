@@ -4,6 +4,14 @@ body {
   background: @colorEnamelWhite;
 }
 
+a{
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .navbar {
   font-family: 'Gloria Hallelujah', cursive;
   overflow: visible;
@@ -30,6 +38,9 @@ body {
         font-size: 200%;
         color: @colorBlueElectricLight;
         font-weight: bold;
+      }
+      .brand:hover{
+        font-size: 205%;
       }
       small {
         font-size: 117%;
@@ -62,12 +73,6 @@ body {
               color: @colorLakeBlue;
               font-size: 120%;
               text-transform: uppercase;
-
-              -webkit-transition: all 0.5s ease;
-              -moz-transition: all 0.5s ease;
-              -o-transition: all 0.5s ease;
-              -ms-transition: all 0.5s ease;
-              transition: all 0.5s ease;
               &:hover{
                 color: @colorAquaLit;
                 font-size: 150%;
@@ -113,8 +118,8 @@ body {
 
 .page-header {
   padding: 1em .4em 2em;
-  margin: 0;
-  border-bottom: 2px solid @colorBlueElectricLight;
+  margin: 0em .4em;
+  border-bottom: .3em solid @colorLakeBlue;
 }
 
 .header-svg {
@@ -264,6 +269,9 @@ body {
   }
   .mecontact{
     margin-left: 10%;
+    a:hover{
+      font-size: 110%
+    }
   }
 }
 
@@ -294,10 +302,22 @@ body {
     }
     a:hover{
       color: @colorLakeBlueLight;
-    }
+   }
 
   }
 }
+
+footer{
+  font-family: 'Gloria Hallelujah', cursive;
+  border-top: 1px solid @colorGreyLight;
+  padding: 1.3em 1em .2em 1em;
+  a:hover{
+      color: @colorWaltermelonRed;
+      text-decoration: none;
+      font-size: 110%
+  }
+}
+
 
 
 

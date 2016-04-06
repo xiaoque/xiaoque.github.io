@@ -5,6 +5,8 @@
     float: left;
     width: 75%;
     hr{
+      border-bottom: .2em solid @colorGreyLight;
+      border-top: 0;
       margin-bottom: 0px;
     }
     .content{
@@ -13,12 +15,15 @@
     .cate_box, .tag_box{
       padding-left: 3%;
     }
-    blockquote {
+    blockquote p{
       margin-top: 1.5em;
-      p{
       font-family: 'Dancing Script', cursive;
       font-size: 130%;
-      }
+    }
+    a:hover{
+      color: @colorWaltermelonRed;
+      text-decoration: none;
+      font-size: 110%;
     }
   }
 
@@ -54,8 +59,10 @@
   .post-title {
     font-family: 'Gloria Hallelujah', cursive;
     color: @colorPurple;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
     padding-left: 2%;
+    margin:0em .4em;
+    border-bottom: .3em @colorLakeBlue solid;
     .post-date{
       font-family: 'Dancing Script', cursive;
       float: right;

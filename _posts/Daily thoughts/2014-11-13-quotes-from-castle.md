@@ -6,7 +6,7 @@ title: Quotes from Castle S07E06
 tag: [Quotes]
 ---
 
-***
+
 
 ![image]({{site.img_url}}/post-sources/2014-11-14-castle.png)  
   

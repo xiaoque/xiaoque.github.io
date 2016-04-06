@@ -7,4 +7,6 @@ description:
 tag: [jQuery, Events]
 ---
 
-[article](http://www.bennadel.com/blog/1805-jquery-events-mouseover-mouseout-vs-mouseenter-mouseleave.htm)
+Well if you feel confused about those jQuery Events as I did, I'm sure this article will help you.  
+
+[Article](http://www.bennadel.com/blog/1805-jquery-events-mouseover-mouseout-vs-mouseenter-mouseleave.htm)

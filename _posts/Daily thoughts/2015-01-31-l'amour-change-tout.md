@@ -8,7 +8,7 @@ tag: [Quotes]
 
 
  
- Le travail sans amour rend esclave  
+ >Le travail sans amour rend esclave  
  La justice sans amour rend impitoyable  
  La vétité sans amour rend critique  
  Le savoir sans amour rend présomptueux  
@@ -20,9 +20,7 @@ tag: [Quotes]
  La richesse sans amour rend avare  
  L'offrande sans amour rend amer  
  La foi sans amour rend fanatique  
- 
- 
- 
+ <br>
  Seigneur parce que tu es Amour  
  Tu illumines notre route  
  Tu donnes du sens à la vie  

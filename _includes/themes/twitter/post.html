@@ -9,9 +9,6 @@
                 <span>{{ page.date | date_to_long_string }}</span>
             </div>
         </div>
-
-        <hr/>
-
         <div class="content">
             {{ content }}
         </div>
@@ -47,7 +44,6 @@
         </div>
     </div>
 
-    <hr>
     <div class="pagination">
         <ul>
             {% if page.previous %}
@@ -69,7 +65,7 @@
 
 
 
-    <hr>
+    <hr/>
     {% include JB/comments-providers/disqus %}
 
 </div>
