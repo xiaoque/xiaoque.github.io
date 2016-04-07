@@ -4,8 +4,11 @@ permalink: /:categories/:year/:month/:day/:title
 img_url: http://xiaoque.github.com/assets/images
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".pdf"]
+
 markdown: kramdown
 highlighter: rouge
+gems: ["jemoji"]
+
 
 kramdown:
   input: GFM

@@ -13,7 +13,7 @@ And I realized that I'm really bad at designe, please tell me if you have some i
 
 The documentation website at <http://jekyllbootstrap.com> is maintained at https://github.com/plusjade/jekyllbootstrap.com
 
-
+Emoji usage checkout http://www.emoji-cheat-sheet.com
 
 ### License
 
