@@ -31,11 +31,25 @@
       }
 
       table{
-        margin-bottom: .4em;
-        td , tr, th{
-        padding: .3em;
-        border: 1px @colorGreyMidDark solid;
-        text-align: center;
+        margin: .5em .5em;
+        display: table;
+        text-align: left;
+        thead{
+          background: @colorWaltermelonRed;
+          color: @colorWhite;
+          min-height: 4em;
+          th{
+            border: none;
+            padding: .4em .5em;
+            font-weight: normal;
+            border-right: 1px @colorWhite solid;
+          }
+        }
+        tbody{
+          background: @colorGreyVeryLight;
+          td{
+            padding: .4em 1em .4em .5em;
+          }
         }
       }
     }
