@@ -11,12 +11,15 @@ group: navigation
   {% include JB/categories_list %}
 </ul>
 
+<div class="cat nestlist">
 
-{% for category in site.categories %} 
-  <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h3>
-  <ul>
-    {% assign pages_list = category[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-{% endfor %}
+	{% for category in site.categories %} 
+	  <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h3>
+	  <ul>
+	    {% assign pages_list = category[1] %}  
+	    {% include JB/pages_list %}
+	  </ul>
+	{% endfor %}
+
+</div>
 
