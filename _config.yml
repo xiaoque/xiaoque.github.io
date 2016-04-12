@@ -12,7 +12,6 @@ gems: ["jemoji"]
 
 kramdown:
   input: GFM
-  enable_coderay: false
   line_numbers: true
   start_line: 1
   syntax_highlighter: rouge
@@ -77,8 +76,6 @@ JB :
   #   /assets
   #
   ASSET_PATH : false
-
-  THEME-NAME : twitter
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
