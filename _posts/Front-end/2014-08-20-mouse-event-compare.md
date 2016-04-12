@@ -1,10 +1,10 @@
 ---
 layout: default
 type: post
-category: JS
+category: Front-end
 title: jQuey Events:MouseOver / MouseOut vs. MouseEnter / MouseLeave
 description: 
-tag: [jQuery, Events]
+tag: [jQuery, JS]
 ---
 
 Well if you feel confused about those jQuery Events as I did, I'm sure this article will help you.  

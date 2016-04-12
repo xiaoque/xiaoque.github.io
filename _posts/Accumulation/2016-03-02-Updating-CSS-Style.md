@@ -1,7 +1,7 @@
 ---
 layout: default
 type: post
-category: CSS
+category: Accumulation
 title: Updating CSS Style
 description: Some websites for CSS inspiration
 tag: [HTML5, CSS]
