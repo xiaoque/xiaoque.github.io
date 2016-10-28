@@ -3,26 +3,26 @@ layout: default
 type: post
 category: Diary
 title: Contact Lenses Memo
-description: Since my glasses were broken, I've been using contact lenses for about 1 year, and I'm still trying to find the one most suitable for me. 
+description: Since my glasses were broken, I've been using contact lenses everyday for about 1 year, and I'm still trying to find the one most suitable for me. 
 tag: [Health]
 ---
 
->Well I started to use lenses 7 years ago, when I was at school, I only used them in weekends and holidays, I tried annual, quarterly, monthly, 2 weeks disposable lenses so far. After my glasses were accidentally broken, I began to use them every day, and that makes me realize, there is difference between those lenses.  
-<br>
-Here, I just list those lenses I remembered , their descriptions, and my personal feeling. But as you know, lenses are often sold in a pack with 6 pairs, that really needs time to try new one.  
+>Well I actually started to use lenses 7 years ago, when I was at high school, I only used them in weekends and holidays, I tried annual, quarterly, monthly, 2 weeks disposable lenses so far. After my glasses were accidentally broken, I began to use them every day, and that makes me realize, there is difference between those lenses.  
+><br>
+>Here, I just list those lenses I remembered , their descriptions, and my personal feeling. But as you know, lenses are often sold in a pack with 6 pairs, that really needs time to try new one.  
 
 #### ACUVUE Clear
-  
+
   
 
 ![image]({{site.img_url}}/post-sources/2016-04-07-acuvue-clear.jpg)  
 
-BC | DIA | Water Content| Material | Type | Price
--- | --- | -------------|----------| -----| ---
-8.4|14.0 | 58%	 |Etafilcon A|Monthly Disposable | Around 18€ (6 lenses / box)
-  
+| BC   | DIA  | Water Content | Material    | Type               | Price                       |
+| ---- | ---- | ------------- | ----------- | ------------------ | --------------------------- |
+| 8.4  | 14.0 | 58%           | Etafilcon A | Monthly Disposable | Around 18€ (6 lenses / box) |
+
    
-   
+
 This is my favorite one, I hardly feel it especially if I use it during weekend, but when it comes to week days, I have to look at computer all the day, so in late afternoon, I can feel my eyes become too dry, and I'm afraid they would fall out each time I blink my eyes. I think the screen has something to do with it.  
 
 And another thing bothers me is that they are extrememy thin, so they are easily inside out, and they are so thin, those common methods to distinguish inside-out or correct oriented don't work so well.
@@ -34,15 +34,15 @@ __Conclusion:__
 Price: ★★★★☆  
 Comfortable: ★★★★☆   
 
-***  
+***
 
 #### Bausch & Lomb 
 
 ![image]({{site.img_url}}/post-sources/2016-04-07-b.jpg)  
- 
-BC | DIA | Water Content| Material | Type | Price
--- | --- | -------------|----------| -----| ---
-8.7|14.0 | 38%	 |Polymacon| half-year Disposable | Around 30€ (2 lenses / box)   
+
+| BC   | DIA  | Water Content | Material  | Type                 | Price                       |
+| ---- | ---- | ------------- | --------- | -------------------- | --------------------------- |
+| 8.7  | 14.0 | 38%           | Polymacon | half-year Disposable | Around 30€ (2 lenses / box) |
 
 I used this one through all my university, and I only find it in China, maybe it's special model in Asia ?  
 
@@ -60,9 +60,9 @@ Comfortable: ★★★☆☆
 
 ![image]({{site.img_url}}/post-sources/2016-04-07-bcolor.jpg) 
 
-BC | DIA | Water Content| Material | Type | Price
--- | --- | -------------|----------| -----| ---
-8.6|14.0 | 42%	 |Hefilcon A| 2-week Disposable | Around 30€ (6 lenses / box)  
+| BC   | DIA  | Water Content | Material   | Type              | Price                       |
+| ---- | ---- | ------------- | ---------- | ----------------- | --------------------------- |
+| 8.6  | 14.0 | 42%           | Hefilcon A | 2-week Disposable | Around 30€ (6 lenses / box) |
 
 This is my first color lenses, I bought it in China, so the price is only for reference.  
 
@@ -81,12 +81,22 @@ Comfortable: ★★★☆☆
 
 ![image]({{site.img_url}}/post-sources/2016-04-07-air-optix.png) 
 
-BC | DIA | Water Content| Material | Type | Price
--- | --- | -------------|----------| -----| ---
-8.6|14.2 | 33%	 |Lotrafilcon B| Monthly Disposable | Around 25€ (6 lenses / box)  
+| BC   | DIA  | Water Content | Material      | Type               | Price                       |
+| ---- | ---- | ------------- | ------------- | ------------------ | --------------------------- |
+| 8.6  | 14.2 | 33%           | Lotrafilcon B | Monthly Disposable | Around 25€ (6 lenses / box) |
 
+It's the first time I try the brand CIBA VISION, I heard so many positive reviews about them, so when I saw this in the store, I bought it without hesitation.
 
-I just bought this one, that material is really attractive, it's one of Silicon Hydrogels, I never tried this kind before, I'll update my thoughts later.  
+This one has the largest DIA among all the lenses I've used, and it's a little big for me, I have to open my eyes really hard to remove it.  
+
+And the most difficult thing is to take it off, especially after the first use, it was like sticky to my eyeball, which made me very frightened that I’ll never be able to take it off. I think it may be caused by its low water content. On the other side, the good thing about low water content is that you can wear it for all the whole day and still don’t feel any dryness.
+
+For me, I'll rather chose the ACUVUE one, even that need me frequently use eye drops. Taking this off is really become one of my nightmares now. I still have 4 pairs waiting to be used, but I don’t have the courage to open one.
+
+__Conclusion:__ 
+
+Price: ★★★☆☆  
+Comfortable: ★★★☆☆
 
 ***
 
