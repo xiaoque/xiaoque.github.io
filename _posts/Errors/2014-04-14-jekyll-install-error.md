@@ -2,7 +2,7 @@
 layout: default
 type: post
 category: Errors
-title: Jekyll install error
+title: Jekyll Install Error
 description: Error occured when install Jekyll on Mac
 tag: [Jekyll,配置, 问题]
 ---

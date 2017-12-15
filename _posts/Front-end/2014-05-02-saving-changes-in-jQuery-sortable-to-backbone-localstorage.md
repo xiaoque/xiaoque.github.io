@@ -2,7 +2,7 @@
 layout: default
 type: post
 category: Front-end
-title: Saving changes in jQuery Sortable to Backbone localStorage
+title: Saving Changes in jQuery Sortable to Backbone LocalStorage
 description: Aiming to using jQuery Sortable to display models stored in localStorage and saving the sequence after changing.
 tag: [jQuery,Backbone,LocalStorage, JS]
 ---
