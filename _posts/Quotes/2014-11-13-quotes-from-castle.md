@@ -8,10 +8,8 @@ tag: [Quotes]
 
 
 
-![image]({{site.img_url}}/post-sources/2014-11-14-castle.png)  
+![image](/assets/images/post-sources/2014-11-14-castle.png)  
   
-    
-    
 
 >Kate： The moment that I met you,my life became extraordinary.You taught me to be my best self, to look forward to tomorrow's adventures.When I was vunlnerable, you were strong.I love you , Richard Castle.And I want to live my life in the warmth of your smile and the strength of your embrace. I promise you I will love you ,I will be your friend and you partner in crime and in life,always.   
 

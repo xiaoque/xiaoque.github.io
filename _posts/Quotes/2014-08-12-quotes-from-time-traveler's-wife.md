@@ -9,7 +9,7 @@ tag: [Quotes]
    
       
  
- ![image]({{site.img_url}}/post-sources/time-traveler's-wife.jpg)
+![image](/assets/images/post-sources/time-traveler's-wife.jpg)
 
   
   

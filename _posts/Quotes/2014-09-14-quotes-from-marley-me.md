@@ -8,7 +8,7 @@ tag: [Quotes]
 
 
 
- ![image]({{site.img_url}}/post-sources/marley-and-me.jpg)
+![image](/assets/images/post-sources/marley-and-me.jpg)
   
     
     

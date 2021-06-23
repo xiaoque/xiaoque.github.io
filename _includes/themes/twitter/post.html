@@ -1,14 +1,18 @@
 <div class="post-content">
     <div class="post-page-left">
-        <div class="post-title">
-            <h3>{{ page.title }} {% if page.tagline %}
-                <small>{{page.tagline}}</small>
-                {% endif %}
-            </h3>
-            <div class="post-date">
-                <span>{{ page.date | date_to_long_string }}</span>
+        <div class="title">
+            <div class="post-title">
+                <h3>{{ page.title }} {% if page.tagline %}
+                    <small>{{page.tagline}}</small>
+                    {% endif %}
+                </h3>                
             </div>
-        </div>
+            <div class="post-date">
+                <span>{{ page.date | date_to_long_string }}</span>                
+            </div>
+         </div>
+
+
         <div class="content">
             {{ content }}
         </div>
@@ -44,7 +48,7 @@
         </div>
     </div>
 
-    <div class="pagination">
+    <div class="pagination navigation">
         <ul>
             {% if page.previous %}
             <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}"

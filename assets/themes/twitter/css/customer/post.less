@@ -87,19 +87,40 @@
     }
   }
 
-  .post-title {
-    font-family: 'Gloria Hallelujah', cursive;
-    color: @colorPurple;
-    padding-bottom: 3%;
-    padding-left: 2%;
-    margin:0em .4em;
+  .title {
+    margin:0em 2em;
     border-bottom: .3em @colorLakeBlue solid;
+    .post-title{
+      font-family: 'Gloria Hallelujah', cursive;
+      color: @colorPurple;
+      padding-top: 3%;
+      padding-left: 2%;
+      display: inline-block;    
+    }
     .post-date{
       font-family: 'Dancing Script', cursive;
       float: right;
-      margin-right: 5%;
+      padding-top: 7%;
       color: @colorGreyMidDark;
+      display: inline-block;    
     }
+  }
+}
+
+.navigation {
+  width: 75%;
+  margin: 1em;
+  height: 3em;
+  display: inline-block;
+  ul{
+    width: 100%;
+  }
+  .prev{
+    margin-left: 10%;
+  } 
+  .next {
+    float: right;
+    padding-right: 5em;
   }
 }
 
