@@ -1,0 +1,23 @@
+---
+layout: page
+title: Sitemap
+header: Sitemap
+---
+
+{% include JB/setup %}
+
+<div class="pages">
+<ul>
+	{% for page in site.pages %}
+	<li>
+		{{site.production_url}}{{ page.url }}
+	</li>
+	{% endfor %}
+	{% for post in site.posts %}
+	<li>
+		{{site.production_url}}{{ post.url }}
+	</li>
+	{% endfor %}
+</ul>
+</div>
+
