@@ -5,7 +5,7 @@ keywords: null
 author: X,qUe
 language: en
 timezone: Europe/Paris
-url: http://example.com
+url: https://xiaoque.github.io/
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
