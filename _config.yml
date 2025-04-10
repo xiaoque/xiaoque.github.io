@@ -64,3 +64,8 @@ ignore: null
 theme: icarus
 deploy:
   type: 'git'
+hexo_google_adsense:
+  enable: true
+  log_msg: true
+  tag_name: 'GoogleAdsense'
+  file_path: 'source/ads/article_ads.html'
