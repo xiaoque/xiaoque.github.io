@@ -2,10 +2,14 @@
 layout: default
 type: post
 date: 2015-05-28
-category: Daily Thoughts
+category: Quotes
 title: Quotes from A Tale of Two Cities
 tag: [Quotes]
 ---
+
+
+
+
 
 
 >It was the best of times  

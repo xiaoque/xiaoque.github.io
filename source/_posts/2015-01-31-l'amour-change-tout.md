@@ -2,7 +2,7 @@
 layout: default
 type: post
 date: 2015-01-31
-category: Daily Thoughts
+category: Quotes
 title: L'Amour Change tout
 tag: [Quotes]
 ---
