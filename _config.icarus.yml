@@ -98,7 +98,7 @@ head:
     meta:
         # Meta tag specified in <attribute>=<value> style
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
-        - name=google-adsense-account;content=ca-pub-7067598969096122
+        - ''
     # URL or path to the website's RSS atom.xml
     rss: 
 # Page top navigation bar configurations
@@ -299,14 +299,12 @@ widgets:
         # Feedburner ID
 #        feedburner_id: ''
     # Google AdSense unit configurations
-#    -
+    -
        # Where should the widget be placed, left sidebar or right sidebar
-#        position: 
-#        type: adsense
-        # AdSense client ID
-#        client_id: ''
-        # AdSense AD unit ID
-#        slot_id: ''
+        position: left
+        type: adsense
+        client_id: ca-pub-7067598969096122
+        slot_id: 3853103188
     # Follow.it email subscription widget configurations
 #    -
         # Where should the widget be placed, left sidebar or right sidebar
