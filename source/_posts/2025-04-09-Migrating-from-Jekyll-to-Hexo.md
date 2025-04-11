@@ -1,6 +1,7 @@
 ---
 title: Migrating from Jekyll to Hexo
 date: 2025-04-09 23:29:38
+category: Hexo
 tags: [Hexo]
 toc: true
 ---

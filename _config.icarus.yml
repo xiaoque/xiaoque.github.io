@@ -154,33 +154,33 @@ comment:
     shortname: 'xiaoquegithubio'
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-donates:
+#donates:
     # Alipay donate button configurations
-    -
-        type: alipay
+#    -
+#        type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
+#        qrcode: ''
     # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
+#    -
+#        type: buymeacoffee
         # URL to the "Buy me a coffee" page
-        url: ''
+#        url: ''
     # Patreon donate button configurations
-    -
-        type: patreon
+#    -
+#        type: patreon
         # URL to the Patreon page
-        url: ''
+#        url: ''
     # Wechat donate button configurations
-    -
-        type: wechat
+#    -
+#        type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+#        qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-# share:
-#    type: addtoany
+share:
+    type: sharethis
     # URL to the ShareThis share plugin script
-#    install_url: ''
+    install_url: https://platform-api.sharethis.com/js/sharethis.js#property=67f9041086189a0019faff1a&product=inline-share-buttons&source=platform
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
