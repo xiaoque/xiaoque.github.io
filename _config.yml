@@ -21,17 +21,17 @@ i18n_dir: ':lang'
 skip_render: null
 new_post_name: ':year-:month-:day-:title.md'
 default_layout: post
-titlecase: false
+titlecase: true
 external_link:
   enable: true
   field: site
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
-marked:
-  prependRoot: true
-  postAsset: true
+post_asset_folder: false
+#marked:
+#  prependRoot: true
+#  postAsset: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js

@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-category: Default
 toc: true
+category: Default
 tags:
 ---

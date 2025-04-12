@@ -9,7 +9,7 @@ tag: [Quotes]
 
 
 
-![](castle.png)
+![](/asset/post_imgs/castle.png)
 
 
 

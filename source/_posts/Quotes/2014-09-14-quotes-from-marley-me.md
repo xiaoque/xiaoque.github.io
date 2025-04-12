@@ -9,7 +9,7 @@ tag: [Quotes]
 
    
 
-![](screenshot.jpg)
+![](/asset/post_imgs/marley-me.jpg)
 
 
 

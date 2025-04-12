@@ -7,11 +7,9 @@ title: Quotes from Criminal Minds S10 E13
 tag: [Quotes]
 ---
 
-![](screenshot.jpg)
+![](/asset/post_imgs/criminal-minds1.jpg)
 
-
-
-![](screenshot2.jpg)
+![](/asset/post_imgs/criminal-minds1.jpg)
 
 
 
