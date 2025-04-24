@@ -51,7 +51,7 @@ formated_title=$(echo "$raw_title" | awk '{
     $i = toupper(substr($i,1,1)) tolower(substr($i,2))
   }
   print
-}' | tr ' ' '-')
+}' | xargs | tr ' ' '-')
 
 # Get the date
 today=$(date +%F)
@@ -84,4 +84,10 @@ In the terminal, simply use:
 ```
 
 A file named `YEAR-MONTH-DAY-File-Name.md` will be created in the current folder, with the date and file name pre-filled.
+
+If you got permission denied. Run this command 
+
+```bash
+chmod +x create.sh
+```
 

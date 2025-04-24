@@ -97,7 +97,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
-        About: /about
+        About me: /about
     # Links to be shown on the right of the navigation bar
 # Page footer configurations
 footer:
@@ -260,11 +260,11 @@ widgets:
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
     # Google AdSense unit configurations
-    -
-        position: left
-        type: adsense
-        client_id: ca-pub-7067598969096122
-        slot_id: 3853103188 
+#   -
+#        position: left
+#        type: adsense
+#        client_id: ca-pub-7067598969096122
+#        slot_id: 3853103188 
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
