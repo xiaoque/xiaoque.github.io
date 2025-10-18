@@ -9,7 +9,7 @@ tag: [Quotes]
 
 ![](/asset/post_imgs/criminal-minds1.jpg)
 
-![](/asset/post_imgs/criminal-minds1.jpg)
+![](/asset/post_imgs/criminal-minds2.jpg)
 
 
 
